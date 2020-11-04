@@ -52,6 +52,8 @@
             this.labelWallMaterial = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.labelK5 = new System.Windows.Forms.Label();
+            this.comboBoxK5 = new System.Windows.Forms.ComboBox();
             this.comboBoxK10 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.labelK10 = new System.Windows.Forms.Label();
@@ -75,8 +77,6 @@
             this.comboBoxK4 = new System.Windows.Forms.ComboBox();
             this.textBoxAreaHouse = new System.Windows.Forms.TextBox();
             this.labelAreaHouse = new System.Windows.Forms.Label();
-            this.labelK5 = new System.Windows.Forms.Label();
-            this.comboBoxK5 = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -110,7 +110,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(792, 340);
+            this.tabPage1.Size = new System.Drawing.Size(792, 400);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Расчёт по площади дома";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -371,20 +371,43 @@
             this.tabPage3.Text = "Расчёт с учётом всех особенностей";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // labelK5
+            // 
+            this.labelK5.AutoSize = true;
+            this.labelK5.Location = new System.Drawing.Point(26, 186);
+            this.labelK5.Name = "labelK5";
+            this.labelK5.Size = new System.Drawing.Size(196, 13);
+            this.labelK5.TabIndex = 35;
+            this.labelK5.Text = "Коэф., учитывающий высоту потолка\r\n";
+            // 
+            // comboBoxK5
+            // 
+            this.comboBoxK5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxK5.FormattingEnabled = true;
+            this.comboBoxK5.Items.AddRange(new object[] {
+            "до 2,7 м – 1,0",
+            "2,8 — 3,0 м – 1,02",
+            "3,1 — 3,9 м – 1,08",
+            "4 м и более – 1,15"});
+            this.comboBoxK5.Location = new System.Drawing.Point(29, 202);
+            this.comboBoxK5.Name = "comboBoxK5";
+            this.comboBoxK5.Size = new System.Drawing.Size(334, 21);
+            this.comboBoxK5.TabIndex = 36;
+            // 
             // comboBoxK10
             // 
             this.comboBoxK10.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxK10.FormattingEnabled = true;
             this.comboBoxK10.Items.AddRange(new object[] {
-            "до 2,7",
-            "2,8",
-            "2,9",
-            "3,0",
-            "3,1 — 3,9",
-            "4 м и более"});
-            this.comboBoxK10.Location = new System.Drawing.Point(628, 106);
+            "Диагональный, где подача сверху, обратка снизу",
+            "Односторонний, где подача сверху, обратка снизу",
+            "Двухсторонний нижний, где и подача, и обратка снизу",
+            "Диагональный, где подача снизу, обратка сверху",
+            "Односторонний, где подача снизу, обратка сверху",
+            "Односторонний нижний, где и подача, и обратка снизу"});
+            this.comboBoxK10.Location = new System.Drawing.Point(29, 249);
             this.comboBoxK10.Name = "comboBoxK10";
-            this.comboBoxK10.Size = new System.Drawing.Size(100, 21);
+            this.comboBoxK10.Size = new System.Drawing.Size(334, 21);
             this.comboBoxK10.TabIndex = 34;
             // 
             // label3
@@ -400,7 +423,7 @@
             // labelK10
             // 
             this.labelK10.AutoSize = true;
-            this.labelK10.Location = new System.Drawing.Point(346, 109);
+            this.labelK10.Location = new System.Drawing.Point(26, 233);
             this.labelK10.Name = "labelK10";
             this.labelK10.Size = new System.Drawing.Size(208, 13);
             this.labelK10.TabIndex = 33;
@@ -409,7 +432,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(121, 305);
+            this.label5.Location = new System.Drawing.Point(121, 370);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(37, 13);
             this.label5.TabIndex = 22;
@@ -424,14 +447,14 @@
             "Прикрыт подоконником или выступом стены",
             "Прикрыт декоративным кожухом только снаружи",
             "Полностью закрыт экраном"});
-            this.comboBoxK9.Location = new System.Drawing.Point(628, 79);
+            this.comboBoxK9.Location = new System.Drawing.Point(395, 107);
             this.comboBoxK9.Name = "comboBoxK9";
-            this.comboBoxK9.Size = new System.Drawing.Size(100, 21);
+            this.comboBoxK9.Size = new System.Drawing.Size(329, 21);
             this.comboBoxK9.TabIndex = 32;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(460, 262);
+            this.button1.Location = new System.Drawing.Point(662, 355);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(122, 37);
             this.button1.TabIndex = 23;
@@ -441,31 +464,31 @@
             // labelK9
             // 
             this.labelK9.AutoSize = true;
-            this.labelK9.Location = new System.Drawing.Point(346, 82);
+            this.labelK9.Location = new System.Drawing.Point(392, 91);
             this.labelK9.Name = "labelK9";
-            this.labelK9.Size = new System.Drawing.Size(247, 13);
+            this.labelK9.Size = new System.Drawing.Size(244, 13);
             this.labelK9.TabIndex = 31;
-            this.labelK9.Text = "Учет расположения батареи и наличия экрана:";
+            this.labelK9.Text = "Учет расположения батареи и наличия экрана\r\n";
             // 
             // comboBoxK8
             // 
             this.comboBoxK8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxK8.FormattingEnabled = true;
             this.comboBoxK8.Items.AddRange(new object[] {
-            "менее 0,1 – k8 = 0,8",
-            "0,11-0,2 – k8 = 0,9",
-            "0,21-0,3 – k8 = 1,0",
-            "0,31-0,4 – k8 = 1,05",
-            " 0,41-0,5 – k8 = 1,15"});
-            this.comboBoxK8.Location = new System.Drawing.Point(497, 194);
+            "менее 0,1",
+            "0,11-0,2",
+            "0,21-0,3",
+            "0,31-0,4",
+            "0,41-0,5"});
+            this.comboBoxK8.Location = new System.Drawing.Point(397, 282);
             this.comboBoxK8.Name = "comboBoxK8";
-            this.comboBoxK8.Size = new System.Drawing.Size(100, 21);
+            this.comboBoxK8.Size = new System.Drawing.Size(327, 21);
             this.comboBoxK8.TabIndex = 30;
             // 
             // labelK1
             // 
             this.labelK1.AutoSize = true;
-            this.labelK1.Location = new System.Drawing.Point(11, 55);
+            this.labelK1.Location = new System.Drawing.Point(26, 45);
             this.labelK1.Name = "labelK1";
             this.labelK1.Size = new System.Drawing.Size(184, 13);
             this.labelK1.TabIndex = 13;
@@ -474,11 +497,12 @@
             // labelK8
             // 
             this.labelK8.AutoSize = true;
-            this.labelK8.Location = new System.Drawing.Point(8, 197);
+            this.labelK8.Location = new System.Drawing.Point(394, 244);
             this.labelK8.Name = "labelK8";
-            this.labelK8.Size = new System.Drawing.Size(461, 13);
+            this.labelK8.Size = new System.Drawing.Size(261, 26);
             this.labelK8.TabIndex = 29;
-            this.labelK8.Text = " Учет суммарной площади остекления (суммарная площадь окон : площадь помещения)";
+            this.labelK8.Text = " Учет суммарной площади остекления \r\n(суммарная площадь окон : площадь помещения)" +
+    "";
             // 
             // comboBoxK1
             // 
@@ -488,9 +512,9 @@
             "Одна",
             "Две",
             "Три"});
-            this.comboBoxK1.Location = new System.Drawing.Point(215, 52);
+            this.comboBoxK1.Location = new System.Drawing.Point(395, 61);
             this.comboBoxK1.Name = "comboBoxK1";
-            this.comboBoxK1.Size = new System.Drawing.Size(100, 21);
+            this.comboBoxK1.Size = new System.Drawing.Size(329, 21);
             this.comboBoxK1.TabIndex = 14;
             // 
             // comboBoxK7
@@ -498,19 +522,19 @@
             this.comboBoxK7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxK7.FormattingEnabled = true;
             this.comboBoxK7.Items.AddRange(new object[] {
-            "Стеклопакетыобычные (в том числе и деревянные) двойные окна",
+            "Стеклопакеты обычные (в том числе и деревянные) двойные окна",
             "Окна с двойным стеклопакетом (2 воздушные камеры)",
             "Двойной стеклопакет с аргоновым заполнением или тройной стеклопакет (3 воздушные " +
                 "камеры)"});
-            this.comboBoxK7.Location = new System.Drawing.Point(628, 52);
+            this.comboBoxK7.Location = new System.Drawing.Point(29, 61);
             this.comboBoxK7.Name = "comboBoxK7";
-            this.comboBoxK7.Size = new System.Drawing.Size(100, 21);
+            this.comboBoxK7.Size = new System.Drawing.Size(334, 21);
             this.comboBoxK7.TabIndex = 28;
             // 
             // labelK2
             // 
             this.labelK2.AutoSize = true;
-            this.labelK2.Location = new System.Drawing.Point(13, 82);
+            this.labelK2.Location = new System.Drawing.Point(26, 91);
             this.labelK2.Name = "labelK2";
             this.labelK2.Size = new System.Drawing.Size(130, 13);
             this.labelK2.TabIndex = 15;
@@ -519,7 +543,7 @@
             // labelK7
             // 
             this.labelK7.AutoSize = true;
-            this.labelK7.Location = new System.Drawing.Point(346, 55);
+            this.labelK7.Location = new System.Drawing.Point(392, 45);
             this.labelK7.Name = "labelK7";
             this.labelK7.Size = new System.Drawing.Size(263, 13);
             this.labelK7.TabIndex = 27;
@@ -532,9 +556,9 @@
             this.comboBoxK2.Items.AddRange(new object[] {
             "Север, северо-восток или восток",
             "Юг, юго-запад или запад"});
-            this.comboBoxK2.Location = new System.Drawing.Point(215, 79);
+            this.comboBoxK2.Location = new System.Drawing.Point(29, 107);
             this.comboBoxK2.Name = "comboBoxK2";
-            this.comboBoxK2.Size = new System.Drawing.Size(100, 21);
+            this.comboBoxK2.Size = new System.Drawing.Size(334, 21);
             this.comboBoxK2.TabIndex = 16;
             // 
             // comboBoxK6
@@ -542,19 +566,18 @@
             this.comboBoxK6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxK6.FormattingEnabled = true;
             this.comboBoxK6.Items.AddRange(new object[] {
-            "Практически не прикрыт подоконником, не прикрыт экраном",
-            "Прикрыт подоконником или выступом стены",
-            "Прикрыт декоративным кожухом только снаружи",
-            "Полностью закрыт экраном"});
-            this.comboBoxK6.Location = new System.Drawing.Point(628, 133);
+            "Холодное, неотапливаемое помещение/чердак",
+            "Утепленный чердак/мансарда",
+            "Отапливаемое жилое помещение"});
+            this.comboBoxK6.Location = new System.Drawing.Point(395, 154);
             this.comboBoxK6.Name = "comboBoxK6";
-            this.comboBoxK6.Size = new System.Drawing.Size(100, 21);
+            this.comboBoxK6.Size = new System.Drawing.Size(329, 21);
             this.comboBoxK6.TabIndex = 26;
             // 
             // labelK3
             // 
             this.labelK3.AutoSize = true;
-            this.labelK3.Location = new System.Drawing.Point(11, 109);
+            this.labelK3.Location = new System.Drawing.Point(26, 138);
             this.labelK3.Name = "labelK3";
             this.labelK3.Size = new System.Drawing.Size(143, 13);
             this.labelK3.TabIndex = 17;
@@ -563,11 +586,11 @@
             // labelK6
             // 
             this.labelK6.AutoSize = true;
-            this.labelK6.Location = new System.Drawing.Point(346, 136);
+            this.labelK6.Location = new System.Drawing.Point(392, 138);
             this.labelK6.Name = "labelK6";
-            this.labelK6.Size = new System.Drawing.Size(224, 13);
+            this.labelK6.Size = new System.Drawing.Size(221, 13);
             this.labelK6.TabIndex = 25;
-            this.labelK6.Text = "Kоэф, учитывающий теплопотери потолка:";
+            this.labelK6.Text = "Kоэф, учитывающий теплопотери потолка\r\n";
             // 
             // comboBoxK3
             // 
@@ -577,20 +600,20 @@
             "Простые, не утепленные стены",
             "Кладка в 2 кирпича или легкое утепление",
             "Высококачественная расчетная теплоизоляция"});
-            this.comboBoxK3.Location = new System.Drawing.Point(215, 106);
+            this.comboBoxK3.Location = new System.Drawing.Point(29, 154);
             this.comboBoxK3.Name = "comboBoxK3";
-            this.comboBoxK3.Size = new System.Drawing.Size(100, 21);
+            this.comboBoxK3.Size = new System.Drawing.Size(334, 21);
             this.comboBoxK3.TabIndex = 18;
             // 
             // labelK4
             // 
             this.labelK4.AutoSize = true;
-            this.labelK4.Location = new System.Drawing.Point(11, 163);
+            this.labelK4.Location = new System.Drawing.Point(392, 186);
             this.labelK4.Name = "labelK4";
-            this.labelK4.Size = new System.Drawing.Size(586, 13);
+            this.labelK4.Size = new System.Drawing.Size(332, 26);
             this.labelK4.TabIndex = 19;
-            this.labelK4.Text = "Подробный учет климатических условий локации (уличная температура воздуха в самую" +
-    " холодную неделю зимы)";
+            this.labelK4.Text = "Подробный учет климатических условий локации \r\n(уличная температура воздуха в сам" +
+    "ую холодную неделю зимы)";
             // 
             // comboBoxK4
             // 
@@ -603,9 +626,9 @@
             "от -15°С до -19°С",
             "от -10°С до -14°С",
             "не холоднее, чем -10°С"});
-            this.comboBoxK4.Location = new System.Drawing.Point(628, 160);
+            this.comboBoxK4.Location = new System.Drawing.Point(395, 215);
             this.comboBoxK4.Name = "comboBoxK4";
-            this.comboBoxK4.Size = new System.Drawing.Size(100, 21);
+            this.comboBoxK4.Size = new System.Drawing.Size(329, 21);
             this.comboBoxK4.TabIndex = 20;
             // 
             // textBoxAreaHouse
@@ -626,29 +649,6 @@
             this.labelAreaHouse.Size = new System.Drawing.Size(103, 13);
             this.labelAreaHouse.TabIndex = 3;
             this.labelAreaHouse.Text = "Площадь дома, м2";
-            // 
-            // labelK5
-            // 
-            this.labelK5.AutoSize = true;
-            this.labelK5.Location = new System.Drawing.Point(11, 136);
-            this.labelK5.Name = "labelK5";
-            this.labelK5.Size = new System.Drawing.Size(199, 13);
-            this.labelK5.TabIndex = 35;
-            this.labelK5.Text = "Коэф., учитывающий высоту потолка:\r\n";
-            // 
-            // comboBoxK5
-            // 
-            this.comboBoxK5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxK5.FormattingEnabled = true;
-            this.comboBoxK5.Items.AddRange(new object[] {
-            "до 2,7 м – 1,0",
-            "2,8 — 3,0 м – 1,02",
-            "3,1 — 3,9 м – 1,08",
-            "4 м и более – 1,15"});
-            this.comboBoxK5.Location = new System.Drawing.Point(215, 133);
-            this.comboBoxK5.Name = "comboBoxK5";
-            this.comboBoxK5.Size = new System.Drawing.Size(100, 21);
-            this.comboBoxK5.TabIndex = 36;
             // 
             // BoilerForm
             // 
