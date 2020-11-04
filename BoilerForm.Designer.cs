@@ -33,14 +33,15 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.labelCaclulateAreaResult = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.labelPoverReserve = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.comboBoxReservePower = new System.Windows.Forms.ComboBox();
+            this.labelPowerReserve = new System.Windows.Forms.Label();
+            this.textBoxAreaHouse = new System.Windows.Forms.TextBox();
             this.labelAreaHouse = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.buttonCalculateArea = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -51,27 +52,25 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Location = new System.Drawing.Point(0, 87);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(800, 450);
+            this.tabControl1.Size = new System.Drawing.Size(795, 351);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.labelCaclulateAreaResult);
+            this.tabPage1.Controls.Add(this.buttonCalculateArea);
             this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.comboBox1);
-            this.tabPage1.Controls.Add(this.labelPoverReserve);
-            this.tabPage1.Controls.Add(this.textBox1);
-            this.tabPage1.Controls.Add(this.labelAreaHouse);
             this.tabPage1.Controls.Add(this.pictureBox1);
+            this.tabPage1.Controls.Add(this.comboBoxReservePower);
+            this.tabPage1.Controls.Add(this.labelPowerReserve);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(792, 424);
+            this.tabPage1.Size = new System.Drawing.Size(787, 325);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Расчёт по площади";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -79,7 +78,7 @@
             // labelCaclulateAreaResult
             // 
             this.labelCaclulateAreaResult.AutoSize = true;
-            this.labelCaclulateAreaResult.Location = new System.Drawing.Point(99, 330);
+            this.labelCaclulateAreaResult.Location = new System.Drawing.Point(88, 287);
             this.labelCaclulateAreaResult.Name = "labelCaclulateAreaResult";
             this.labelCaclulateAreaResult.Size = new System.Drawing.Size(37, 13);
             this.labelCaclulateAreaResult.TabIndex = 8;
@@ -89,46 +88,46 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(96, 273);
+            this.label2.Location = new System.Drawing.Point(88, 129);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(577, 32);
             this.label2.TabIndex = 7;
             this.label2.Text = "Если ваш случай отличается от среднестатистичекого дома, \r\nстоит рассчитать мощно" +
     "сть котла более точным методом с учетом всех особенностей.";
             // 
-            // comboBox1
+            // comboBoxReservePower
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBoxReservePower.FormattingEnabled = true;
+            this.comboBoxReservePower.Items.AddRange(new object[] {
             "10",
             "15",
             "20",
             "25"});
-            this.comboBox1.Location = new System.Drawing.Point(222, 198);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(100, 21);
-            this.comboBox1.TabIndex = 6;
+            this.comboBoxReservePower.Location = new System.Drawing.Point(214, 180);
+            this.comboBoxReservePower.Name = "comboBoxReservePower";
+            this.comboBoxReservePower.Size = new System.Drawing.Size(100, 21);
+            this.comboBoxReservePower.TabIndex = 6;
             // 
-            // labelPoverReserve
+            // labelPowerReserve
             // 
-            this.labelPoverReserve.AutoSize = true;
-            this.labelPoverReserve.Location = new System.Drawing.Point(96, 201);
-            this.labelPoverReserve.Name = "labelPoverReserve";
-            this.labelPoverReserve.Size = new System.Drawing.Size(107, 13);
-            this.labelPoverReserve.TabIndex = 5;
-            this.labelPoverReserve.Text = "Запас мощности, %";
+            this.labelPowerReserve.AutoSize = true;
+            this.labelPowerReserve.Location = new System.Drawing.Point(88, 183);
+            this.labelPowerReserve.Name = "labelPowerReserve";
+            this.labelPowerReserve.Size = new System.Drawing.Size(107, 13);
+            this.labelPowerReserve.TabIndex = 5;
+            this.labelPowerReserve.Text = "Запас мощности, %";
             // 
-            // textBox1
+            // textBoxAreaHouse
             // 
-            this.textBox1.Location = new System.Drawing.Point(222, 159);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 4;
+            this.textBoxAreaHouse.Location = new System.Drawing.Point(141, 12);
+            this.textBoxAreaHouse.Name = "textBoxAreaHouse";
+            this.textBoxAreaHouse.Size = new System.Drawing.Size(100, 20);
+            this.textBoxAreaHouse.TabIndex = 4;
             // 
             // labelAreaHouse
             // 
             this.labelAreaHouse.AutoSize = true;
-            this.labelAreaHouse.Location = new System.Drawing.Point(96, 162);
+            this.labelAreaHouse.Location = new System.Drawing.Point(15, 15);
             this.labelAreaHouse.Name = "labelAreaHouse";
             this.labelAreaHouse.Size = new System.Drawing.Size(103, 13);
             this.labelAreaHouse.TabIndex = 3;
@@ -176,12 +175,24 @@
             this.tabPage3.Text = "Расчёт с учётом все особенностей";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // buttonCalculateArea
+            // 
+            this.buttonCalculateArea.Location = new System.Drawing.Point(214, 225);
+            this.buttonCalculateArea.Name = "buttonCalculateArea";
+            this.buttonCalculateArea.Size = new System.Drawing.Size(122, 37);
+            this.buttonCalculateArea.TabIndex = 8;
+            this.buttonCalculateArea.Text = "Расчитать";
+            this.buttonCalculateArea.UseVisualStyleBackColor = true;
+            this.buttonCalculateArea.Click += new System.EventHandler(this.buttonCalculateArea_Click);
+            // 
             // BoilerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.textBoxAreaHouse);
+            this.Controls.Add(this.labelAreaHouse);
             this.Name = "BoilerForm";
             this.Text = "Расчёт бойлера";
             this.tabControl1.ResumeLayout(false);
@@ -189,6 +200,7 @@
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -200,11 +212,12 @@
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Label labelCaclulateAreaResult;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label labelPoverReserve;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox comboBoxReservePower;
+        private System.Windows.Forms.Label labelPowerReserve;
+        private System.Windows.Forms.TextBox textBoxAreaHouse;
         private System.Windows.Forms.Label labelAreaHouse;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonCalculateArea;
     }
 }

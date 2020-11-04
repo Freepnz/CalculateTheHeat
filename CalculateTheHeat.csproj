@@ -52,6 +52,7 @@
     <Compile Include="BoilerForm.Designer.cs">
       <DependentUpon>BoilerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CalculateBoiler.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +90,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="ClassLibrary\" />
     <Folder Include="img\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
