@@ -32,16 +32,16 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.labelCaclulateAreaResult = new System.Windows.Forms.Label();
+            this.buttonCalculateArea = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.comboBoxReservePower = new System.Windows.Forms.ComboBox();
             this.labelPowerReserve = new System.Windows.Forms.Label();
-            this.textBoxAreaHouse = new System.Windows.Forms.TextBox();
-            this.labelAreaHouse = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.buttonCalculateArea = new System.Windows.Forms.Button();
+            this.textBoxAreaHouse = new System.Windows.Forms.TextBox();
+            this.labelAreaHouse = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -84,6 +84,16 @@
             this.labelCaclulateAreaResult.TabIndex = 8;
             this.labelCaclulateAreaResult.Text = "Result";
             // 
+            // buttonCalculateArea
+            // 
+            this.buttonCalculateArea.Location = new System.Drawing.Point(214, 225);
+            this.buttonCalculateArea.Name = "buttonCalculateArea";
+            this.buttonCalculateArea.Size = new System.Drawing.Size(122, 37);
+            this.buttonCalculateArea.TabIndex = 8;
+            this.buttonCalculateArea.Text = "Расчитать";
+            this.buttonCalculateArea.UseVisualStyleBackColor = true;
+            this.buttonCalculateArea.Click += new System.EventHandler(this.buttonCalculateArea_Click);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -95,8 +105,19 @@
             this.label2.Text = "Если ваш случай отличается от среднестатистичекого дома, \r\nстоит рассчитать мощно" +
     "сть котла более точным методом с учетом всех особенностей.";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(86, 21);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(93, 84);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // comboBoxReservePower
             // 
+            this.comboBoxReservePower.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxReservePower.FormattingEnabled = true;
             this.comboBoxReservePower.Items.AddRange(new object[] {
             "10",
@@ -117,32 +138,6 @@
             this.labelPowerReserve.TabIndex = 5;
             this.labelPowerReserve.Text = "Запас мощности, %";
             // 
-            // textBoxAreaHouse
-            // 
-            this.textBoxAreaHouse.Location = new System.Drawing.Point(141, 12);
-            this.textBoxAreaHouse.Name = "textBoxAreaHouse";
-            this.textBoxAreaHouse.Size = new System.Drawing.Size(100, 20);
-            this.textBoxAreaHouse.TabIndex = 4;
-            // 
-            // labelAreaHouse
-            // 
-            this.labelAreaHouse.AutoSize = true;
-            this.labelAreaHouse.Location = new System.Drawing.Point(15, 15);
-            this.labelAreaHouse.Name = "labelAreaHouse";
-            this.labelAreaHouse.Size = new System.Drawing.Size(103, 13);
-            this.labelAreaHouse.TabIndex = 3;
-            this.labelAreaHouse.Text = "Площадь дома, м2";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(86, 21);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(93, 84);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -160,7 +155,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(792, 424);
+            this.tabPage2.Size = new System.Drawing.Size(787, 325);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Расчёт по объёму";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -170,20 +165,26 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(792, 424);
+            this.tabPage3.Size = new System.Drawing.Size(787, 325);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Расчёт с учётом все особенностей";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // buttonCalculateArea
+            // textBoxAreaHouse
             // 
-            this.buttonCalculateArea.Location = new System.Drawing.Point(214, 225);
-            this.buttonCalculateArea.Name = "buttonCalculateArea";
-            this.buttonCalculateArea.Size = new System.Drawing.Size(122, 37);
-            this.buttonCalculateArea.TabIndex = 8;
-            this.buttonCalculateArea.Text = "Расчитать";
-            this.buttonCalculateArea.UseVisualStyleBackColor = true;
-            this.buttonCalculateArea.Click += new System.EventHandler(this.buttonCalculateArea_Click);
+            this.textBoxAreaHouse.Location = new System.Drawing.Point(141, 12);
+            this.textBoxAreaHouse.Name = "textBoxAreaHouse";
+            this.textBoxAreaHouse.Size = new System.Drawing.Size(100, 20);
+            this.textBoxAreaHouse.TabIndex = 4;
+            // 
+            // labelAreaHouse
+            // 
+            this.labelAreaHouse.AutoSize = true;
+            this.labelAreaHouse.Location = new System.Drawing.Point(15, 15);
+            this.labelAreaHouse.Name = "labelAreaHouse";
+            this.labelAreaHouse.Size = new System.Drawing.Size(103, 13);
+            this.labelAreaHouse.TabIndex = 3;
+            this.labelAreaHouse.Text = "Площадь дома, м2";
             // 
             // BoilerForm
             // 

@@ -25,9 +25,10 @@ namespace CalculateTheHeat
 
         private void buttonCalculateArea_Click(object sender, EventArgs e)
         {
-            CalculateBoiler calculateBoiler = new CalculateBoiler(Convert.ToDecimal(textBoxAreaHouse.Text), Convert.ToInt32(comboBoxReservePower.Text));
+            CalculateBoiler calculateBoiler = new CalculateBoiler();
+
             labelCaclulateAreaResult.Text = "Для отопления дома площадью " + textBoxAreaHouse.Text + " кв.м., необходим котёл мощностью " + 
-                calculateBoiler.CalculateBoilerArea(Convert.ToDecimal(textBoxAreaHouse.Text), Convert.ToInt32(comboBoxReservePower.Text)) + " кВт/ч";
+                calculateBoiler.CalculateBoilerArea(textBoxAreaHouse.Text, comboBoxReservePower.Text) + " кВт/ч";
         }
     }
 }
