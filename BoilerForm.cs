@@ -30,5 +30,28 @@ namespace CalculateTheHeat
             labelCaclulateAreaResult.Text = "Для отопления дома площадью " + textBoxAreaHouse.Text + " кв.м., необходим котёл мощностью " + 
                 calculateBoiler.CalculateBoilerArea(textBoxAreaHouse.Text, comboBoxReservePower.Text) + " кВт/ч";
         }
+
+        private void textBoxAreaHouse_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char number = e.KeyChar;
+
+            if (!Char.IsDigit(number) && number != 8) // цифры, клавиша BackSpace
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxAreaHouse_Click(object sender, EventArgs e)
+        {
+            textBoxAreaHouse.Text = "";
+        }
+
+        private void textBoxAreaHouse_Leave(object sender, EventArgs e)
+        {
+            if (textBoxAreaHouse.Text == "")
+            {
+                textBoxAreaHouse.Text = "0";
+            }
+        }
     }
 }

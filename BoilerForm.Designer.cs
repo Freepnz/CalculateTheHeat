@@ -176,6 +176,9 @@
             this.textBoxAreaHouse.Name = "textBoxAreaHouse";
             this.textBoxAreaHouse.Size = new System.Drawing.Size(100, 20);
             this.textBoxAreaHouse.TabIndex = 4;
+            this.textBoxAreaHouse.Click += new System.EventHandler(this.textBoxAreaHouse_Click);
+            this.textBoxAreaHouse.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAreaHouse_KeyPress);
+            this.textBoxAreaHouse.Leave += new System.EventHandler(this.textBoxAreaHouse_Leave);
             // 
             // labelAreaHouse
             // 
