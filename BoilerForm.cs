@@ -22,6 +22,7 @@ namespace CalculateTheHeat
             labelCalculateVolumeResult.Text = "";
             comboBoxHeightWall.SelectedIndex = 0;
             comboBoxWallMaterial.SelectedIndex = 0;
+            labelCalculateAllFeaturesResult.Text = "";
             labelVolumeAttention.Text = "";
             comboBoxK1.SelectedIndex = 0;
             comboBoxK2.SelectedIndex = 0;
@@ -129,7 +130,17 @@ namespace CalculateTheHeat
 
         #region Расчёт с учётом всех особенностей
 
+        private void buttonCalculateAllFeaturesReslt_Click(object sender, EventArgs e)
+        {
+            CalculateBoiler calculateBoilerAllFeatures = new CalculateBoiler();
 
+            labelCalculateAllFeaturesResult.Text = "Для отопления дома площадью " + textBoxAreaHouse.Text + " кв.м., необходим котёл мощностью " +
+                calculateBoilerAllFeatures.CalculateBoilerAllFeatures(textBoxAreaHouse.Text,
+                comboBoxK1.SelectedIndex, comboBoxK2.SelectedIndex, comboBoxK3.SelectedIndex,
+                comboBoxK4.SelectedIndex, comboBoxK5.SelectedIndex, comboBoxK6.SelectedIndex,
+                comboBoxK7.SelectedIndex, comboBoxK8.SelectedIndex, comboBoxK9.SelectedIndex,
+                comboBoxK10.SelectedIndex) + " кВт/ч";
+        }
         #endregion
 
         private void textBoxAreaHouse_KeyPress(object sender, KeyPressEventArgs e)

@@ -52,14 +52,16 @@
             this.labelWallMaterial = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.labelK5 = new System.Windows.Forms.Label();
             this.comboBoxK5 = new System.Windows.Forms.ComboBox();
             this.comboBoxK10 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.labelK10 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.labelCalculateAllFeaturesResult = new System.Windows.Forms.Label();
             this.comboBoxK9 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonCalculateAllFeaturesReslt = new System.Windows.Forms.Button();
             this.labelK9 = new System.Windows.Forms.Label();
             this.comboBoxK8 = new System.Windows.Forms.ComboBox();
             this.labelK1 = new System.Windows.Forms.Label();
@@ -77,8 +79,6 @@
             this.comboBoxK4 = new System.Windows.Forms.ComboBox();
             this.textBoxAreaHouse = new System.Windows.Forms.TextBox();
             this.labelAreaHouse = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -347,9 +347,9 @@
             this.tabPage3.Controls.Add(this.comboBoxK10);
             this.tabPage3.Controls.Add(this.label3);
             this.tabPage3.Controls.Add(this.labelK10);
-            this.tabPage3.Controls.Add(this.label5);
+            this.tabPage3.Controls.Add(this.labelCalculateAllFeaturesResult);
             this.tabPage3.Controls.Add(this.comboBoxK9);
-            this.tabPage3.Controls.Add(this.button1);
+            this.tabPage3.Controls.Add(this.buttonCalculateAllFeaturesReslt);
             this.tabPage3.Controls.Add(this.labelK9);
             this.tabPage3.Controls.Add(this.comboBoxK8);
             this.tabPage3.Controls.Add(this.labelK1);
@@ -372,6 +372,22 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Расчёт с учётом всех особенностей";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(407, 314);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 38;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(406, 297);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(172, 13);
+            this.label9.TabIndex = 37;
+            this.label9.Text = "Общая площадь остекления, м2";
             // 
             // labelK5
             // 
@@ -431,14 +447,14 @@
             this.labelK10.TabIndex = 33;
             this.labelK10.Text = "Учет способа подключения радиаторов";
             // 
-            // label5
+            // labelCalculateAllFeaturesResult
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(121, 370);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 13);
-            this.label5.TabIndex = 22;
-            this.label5.Text = "Result";
+            this.labelCalculateAllFeaturesResult.AutoSize = true;
+            this.labelCalculateAllFeaturesResult.Location = new System.Drawing.Point(121, 370);
+            this.labelCalculateAllFeaturesResult.Name = "labelCalculateAllFeaturesResult";
+            this.labelCalculateAllFeaturesResult.Size = new System.Drawing.Size(37, 13);
+            this.labelCalculateAllFeaturesResult.TabIndex = 22;
+            this.labelCalculateAllFeaturesResult.Text = "Result";
             // 
             // comboBoxK9
             // 
@@ -454,14 +470,15 @@
             this.comboBoxK9.Size = new System.Drawing.Size(350, 21);
             this.comboBoxK9.TabIndex = 32;
             // 
-            // button1
+            // buttonCalculateAllFeaturesReslt
             // 
-            this.button1.Location = new System.Drawing.Point(662, 355);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(122, 37);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "Расчитать";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonCalculateAllFeaturesReslt.Location = new System.Drawing.Point(662, 355);
+            this.buttonCalculateAllFeaturesReslt.Name = "buttonCalculateAllFeaturesReslt";
+            this.buttonCalculateAllFeaturesReslt.Size = new System.Drawing.Size(122, 37);
+            this.buttonCalculateAllFeaturesReslt.TabIndex = 23;
+            this.buttonCalculateAllFeaturesReslt.Text = "Расчитать";
+            this.buttonCalculateAllFeaturesReslt.UseVisualStyleBackColor = true;
+            this.buttonCalculateAllFeaturesReslt.Click += new System.EventHandler(this.buttonCalculateAllFeaturesReslt_Click);
             // 
             // labelK9
             // 
@@ -651,22 +668,6 @@
             this.labelAreaHouse.TabIndex = 3;
             this.labelAreaHouse.Text = "Площадь дома, м2";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(406, 297);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(172, 13);
-            this.label9.TabIndex = 37;
-            this.label9.Text = "Общая площадь остекления, м2";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(407, 314);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 38;
-            // 
             // BoilerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -736,8 +737,8 @@
         private System.Windows.Forms.ComboBox comboBoxK10;
         private System.Windows.Forms.Label labelK10;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label labelCalculateAllFeaturesResult;
+        private System.Windows.Forms.Button buttonCalculateAllFeaturesReslt;
         private System.Windows.Forms.ComboBox comboBoxHeightWall;
         private System.Windows.Forms.Label labelHeightWall;
         private System.Windows.Forms.Label labelK5;
