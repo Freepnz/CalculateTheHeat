@@ -531,7 +531,7 @@
             "Одна",
             "Две",
             "Три"});
-            this.comboBoxK1.Location = new System.Drawing.Point(407, 61);
+            this.comboBoxK1.Location = new System.Drawing.Point(29, 61);
             this.comboBoxK1.Name = "comboBoxK1";
             this.comboBoxK1.Size = new System.Drawing.Size(350, 21);
             this.comboBoxK1.TabIndex = 14;
@@ -544,7 +544,7 @@
             "Стеклопакеты обычные (деревянные) двойные окна",
             "Окна с двойным стеклопакетом (2 воздушные камеры)",
             "Стеклопакет с аргоновым заполнением, тройной стеклопакет "});
-            this.comboBoxK7.Location = new System.Drawing.Point(29, 61);
+            this.comboBoxK7.Location = new System.Drawing.Point(407, 61);
             this.comboBoxK7.Name = "comboBoxK7";
             this.comboBoxK7.Size = new System.Drawing.Size(348, 21);
             this.comboBoxK7.TabIndex = 28;

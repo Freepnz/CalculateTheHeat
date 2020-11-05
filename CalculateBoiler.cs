@@ -63,83 +63,83 @@ namespace CalculateTheHeat
         {
             areaHouse = Convert.ToDecimal(areaValue);
             #region Коэффициенты К
-            switch (k1)
+            switch (k1val)
             {
-                case 1: this.k1 = 1.0M; break;
-                case 2: this.k1 = 1.2M; break;
-                case 3: this.k1 = 1.3M; break;
+                case 0: this.k1 = 1.0M; break;
+                case 1: this.k1 = 1.2M; break;
+                case 2: this.k1 = 1.3M; break;
                 default: break;
             }
-            switch (k2)
+            switch (k2val)
             {
-                case 1: this.k2 = 1.1M; break;
-                case 2: this.k2 = 1.0M; break;
+                case 0: this.k2 = 1.1M; break;
+                case 1: this.k2 = 1.0M; break;
                 default: break;
             }
-            switch (k3)
+            switch (k3val)
             {
-                case 1: this.k3 = 1.17M; break;
-                case 2: this.k3 = 1.0M; break;
-                case 3: this.k3 = 0.85M; break;
+                case 0: this.k3 = 1.17M; break;
+                case 1: this.k3 = 1.0M; break;
+                case 2: this.k3 = 0.85M; break;
                 default: break;
             }
-            switch (k4)
+            switch (k4val)
             {
-                case 1: this.k4 = 1.4M; break;
-                case 2: this.k4 = 1.25M; break;
-                case 3: this.k4 = 1.2M; break;
-                case 4: this.k4 = 1.1M; break;
-                case 5: this.k4 = 0.9M; break;
-                case 6: this.k4 = 0.7M; break;
+                case 0: this.k4 = 1.4M; break;
+                case 1: this.k4 = 1.25M; break;
+                case 2: this.k4 = 1.2M; break;
+                case 3: this.k4 = 1.1M; break;
+                case 4: this.k4 = 0.9M; break;
+                case 5: this.k4 = 0.7M; break;
                 default: break;
             }
-            switch (k5)
+            switch (k5val)
             {
-                case 1: this.k5 = 1.00M; break;
-                case 2: this.k5 = 1.02M; break;
-                case 3: this.k5 = 1.08M; break;
-                case 4: this.k5 = 0.15M; break;
+                case 0: this.k5 = 1.00M; break;
+                case 1: this.k5 = 1.02M; break;
+                case 2: this.k5 = 1.08M; break;
+                case 3: this.k5 = 1.15M; break;
                 default: break;
             }
-            switch (k6)
+            switch (k6val)
             {
-                case 1: this.k6 = 1.00M; break;
-                case 2: this.k6 = 0.9M; break;
-                case 3: this.k6 = 0.8M; break;
+                case 0: this.k6 = 1.00M; break;
+                case 1: this.k6 = 0.9M; break;
+                case 2: this.k6 = 0.8M; break;
                 default: break;
             }
-            switch (k7)
+            switch (k7val)
             {
-                case 1: this.k7 = 1.17M; break;
-                case 2: this.k7 = 1.00M; break;
-                case 3: this.k7 = 0.85M; break;
+                case 0: this.k7 = 1.17M; break;
+                case 1: this.k7 = 1.00M; break;
+                case 2: this.k7 = 0.85M; break;
                 default: break;
             }
-            switch (k8)
+            switch (k8val)
             {
-                case 1: this.k8 = 0.8M; break;
-                case 2: this.k8 = 0.9M; break;
-                case 3: this.k8 = 1.00M; break;
-                case 4: this.k8 = 1.05M; break;
-                case 5: this.k8 = 1.15M; break;
+                case 0: this.k8 = 0.8M; break;
+                case 1: this.k8 = 0.9M; break;
+                case 2: this.k8 = 1.00M; break;
+                case 3: this.k8 = 1.05M; break;
+                case 4: this.k8 = 1.15M; break;
                 default: break;
             }
-            switch (k9)
+            switch (k9val)
             {
-                case 1: this.k9 = 0.9M; break;
-                case 2: this.k9 = 1.00M; break;
-                case 3: this.k9 = 1.05M; break;
-                case 4: this.k9 = 1.15M; break;
+                case 0: this.k9 = 0.9M; break;
+                case 1: this.k9 = 1.00M; break;
+                case 2: this.k9 = 1.05M; break;
+                case 3: this.k9 = 1.15M; break;
                 default: break;
             }
-            switch (k10)
+            switch (k10val)
             {
-                case 1: this.k10 = 1.00M; break;
-                case 2: this.k10 = 1.03M; break;
-                case 3: this.k10 = 1.1M; break;
-                case 4: this.k10 = 1.2M; break;
+                case 0: this.k10 = 1.00M; break;
+                case 1: this.k10 = 1.03M; break;
+                case 2: this.k10 = 1.1M; break;
+                case 3: this.k10 = 1.2M; break;
+                case 4: this.k10 = 1.28M; break;
                 case 5: this.k10 = 1.28M; break;
-                case 6: this.k10 = 1.28M; break;
                 default: break;
             }
             #endregion
