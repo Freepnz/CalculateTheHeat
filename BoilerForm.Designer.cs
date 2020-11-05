@@ -52,7 +52,7 @@
             this.labelWallMaterial = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxAreaWindows = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.labelK5 = new System.Windows.Forms.Label();
             this.comboBoxK5 = new System.Windows.Forms.ComboBox();
@@ -63,9 +63,7 @@
             this.comboBoxK9 = new System.Windows.Forms.ComboBox();
             this.buttonCalculateAllFeaturesReslt = new System.Windows.Forms.Button();
             this.labelK9 = new System.Windows.Forms.Label();
-            this.comboBoxK8 = new System.Windows.Forms.ComboBox();
             this.labelK1 = new System.Windows.Forms.Label();
-            this.labelK8 = new System.Windows.Forms.Label();
             this.comboBoxK1 = new System.Windows.Forms.ComboBox();
             this.comboBoxK7 = new System.Windows.Forms.ComboBox();
             this.labelK2 = new System.Windows.Forms.Label();
@@ -340,7 +338,7 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.textBox1);
+            this.tabPage3.Controls.Add(this.textBoxAreaWindows);
             this.tabPage3.Controls.Add(this.label9);
             this.tabPage3.Controls.Add(this.labelK5);
             this.tabPage3.Controls.Add(this.comboBoxK5);
@@ -351,9 +349,7 @@
             this.tabPage3.Controls.Add(this.comboBoxK9);
             this.tabPage3.Controls.Add(this.buttonCalculateAllFeaturesReslt);
             this.tabPage3.Controls.Add(this.labelK9);
-            this.tabPage3.Controls.Add(this.comboBoxK8);
             this.tabPage3.Controls.Add(this.labelK1);
-            this.tabPage3.Controls.Add(this.labelK8);
             this.tabPage3.Controls.Add(this.comboBoxK1);
             this.tabPage3.Controls.Add(this.comboBoxK7);
             this.tabPage3.Controls.Add(this.labelK2);
@@ -373,12 +369,13 @@
             this.tabPage3.Text = "Расчёт с учётом всех особенностей";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // textBoxAreaWindows
             // 
-            this.textBox1.Location = new System.Drawing.Point(609, 249);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 38;
+            this.textBoxAreaWindows.Location = new System.Drawing.Point(609, 249);
+            this.textBoxAreaWindows.Name = "textBoxAreaWindows";
+            this.textBoxAreaWindows.Size = new System.Drawing.Size(100, 20);
+            this.textBoxAreaWindows.TabIndex = 38;
+            this.textBoxAreaWindows.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAreaWindows_KeyPress);
             // 
             // label9
             // 
@@ -489,21 +486,6 @@
             this.labelK9.TabIndex = 31;
             this.labelK9.Text = "Учет расположения батареи и наличия экрана\r\n";
             // 
-            // comboBoxK8
-            // 
-            this.comboBoxK8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxK8.FormattingEnabled = true;
-            this.comboBoxK8.Items.AddRange(new object[] {
-            "менее 0,1",
-            "0,11-0,2",
-            "0,21-0,3",
-            "0,31-0,4",
-            "0,41-0,5"});
-            this.comboBoxK8.Location = new System.Drawing.Point(282, 361);
-            this.comboBoxK8.Name = "comboBoxK8";
-            this.comboBoxK8.Size = new System.Drawing.Size(348, 21);
-            this.comboBoxK8.TabIndex = 30;
-            // 
             // labelK1
             // 
             this.labelK1.AutoSize = true;
@@ -512,16 +494,6 @@
             this.labelK1.Size = new System.Drawing.Size(184, 13);
             this.labelK1.TabIndex = 13;
             this.labelK1.Text = "Кол-во внешних стен в помещения\r\n";
-            // 
-            // labelK8
-            // 
-            this.labelK8.AutoSize = true;
-            this.labelK8.Location = new System.Drawing.Point(281, 332);
-            this.labelK8.Name = "labelK8";
-            this.labelK8.Size = new System.Drawing.Size(261, 26);
-            this.labelK8.TabIndex = 29;
-            this.labelK8.Text = " Учет суммарной площади остекления \r\n(суммарная площадь окон : площадь помещения)" +
-    "";
             // 
             // comboBoxK1
             // 
@@ -728,8 +700,6 @@
         private System.Windows.Forms.Label labelK6;
         private System.Windows.Forms.ComboBox comboBoxK7;
         private System.Windows.Forms.Label labelK7;
-        private System.Windows.Forms.ComboBox comboBoxK8;
-        private System.Windows.Forms.Label labelK8;
         private System.Windows.Forms.ComboBox comboBoxK9;
         private System.Windows.Forms.Label labelK9;
         private System.Windows.Forms.ComboBox comboBoxK10;
@@ -741,7 +711,7 @@
         private System.Windows.Forms.Label labelHeightWall;
         private System.Windows.Forms.Label labelK5;
         private System.Windows.Forms.ComboBox comboBoxK5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxAreaWindows;
         private System.Windows.Forms.Label label9;
     }
 }

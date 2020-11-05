@@ -13,16 +13,8 @@ namespace CalculateTheHeat
         private decimal reservPower = 0;
         private decimal heightWall = 0;     //Глянуть возможность использования автосвойства
         private decimal materialWall = 0;
-        private decimal k1;
-        private decimal k2;
-        private decimal k3;
-        private decimal k4;
-        private decimal k5;
-        private decimal k6;
-        private decimal k7;
-        private decimal k8;
-        private decimal k9;
-        private decimal k10;
+        private decimal k1, k2, k3, k4, k5, k6, k7, k8, k9, k10;
+
 
         public decimal HeightWall { get { return heightWall; } }
 
@@ -39,7 +31,6 @@ namespace CalculateTheHeat
             }
             else
                 areaHouse = Convert.ToDecimal(areaValue);
-
 
             switch (reservPowerValue)
             {
@@ -66,7 +57,7 @@ namespace CalculateTheHeat
             return Convert.ToInt32(heightWall * areaHouse * materialWall);
         }
 
-        public int CalculateBoilerAllFeatures(string areaValue, int k1val, int k2val, int k3val, int k4val, int k5val, int k6val, int k7val, int k8val, int k9val, int k10val)
+        public int CalculateBoilerAllFeatures(string areaValue, int k1val, int k2val, int k3val, int k4val, int k5val, int k6val, int k7val, string k8val, int k9val, int k10val)
         {
             areaHouse = Convert.ToDecimal(areaValue);
             #region Коэффициенты К
@@ -122,15 +113,9 @@ namespace CalculateTheHeat
                 case 2: this.k7 = 0.85M; break;
                 default: break;
             }
-            switch (k8val)
-            {
-                case 0: this.k8 = 0.8M; break;
-                case 1: this.k8 = 0.9M; break;
-                case 2: this.k8 = 1.00M; break;
-                case 3: this.k8 = 1.05M; break;
-                case 4: this.k8 = 1.15M; break;
-                default: break;
-            }
+
+            k8 = SearchAreaWindows(areaHouse, k8val);
+
             switch (k9val)
             {
                 case 0: this.k9 = 0.9M; break;
@@ -151,6 +136,41 @@ namespace CalculateTheHeat
             }
             #endregion
             return Convert.ToInt32(100 * areaHouse * k1 * k2 * k3 * k4 * k5 * k6 * k7 * k8 * k9 * k10 / 1000);
+        }
+
+        private decimal SearchAreaWindows(decimal areaHouse, string k8val)
+        {
+            if (k8val == "")
+            {
+                return 0.8M;
+            }
+            else
+            {
+            decimal result = Convert.ToDecimal(k8val) / areaHouse;
+
+            if (result <= 0.1M)
+            {
+                return 0.8M;
+            }
+            if (result >= 0.11M && result <= 0.2M)
+            {
+                return 0.9M;
+            }
+            if (result >= 0.21M && result <= 0.3M)
+            {
+                return 1;
+            }
+            if (result >= 0.31M && result <= 0.4M)
+            {
+                return 1.05M;
+            }
+            if (result >= 0.41M && result <= 0.5M)
+            {
+                return 1.15M;
+            }
+            else
+                return 1.2M;
+            }
         }
 
         private void MaerialWallCoef(string Value)

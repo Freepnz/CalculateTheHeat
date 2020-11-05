@@ -29,7 +29,6 @@ namespace CalculateTheHeat
             comboBoxK5.SelectedIndex = 0;
             comboBoxK6.SelectedIndex = 0;
             comboBoxK7.SelectedIndex = 0;
-            comboBoxK8.SelectedIndex = 0;
             comboBoxK9.SelectedIndex = 0;
             comboBoxK10.SelectedIndex = 0;
 
@@ -136,9 +135,10 @@ namespace CalculateTheHeat
                 calculateBoilerAllFeatures.CalculateBoilerAllFeatures(textBoxAreaHouse.Text,
                 comboBoxK1.SelectedIndex, comboBoxK2.SelectedIndex, comboBoxK3.SelectedIndex,
                 comboBoxK4.SelectedIndex, comboBoxK5.SelectedIndex, comboBoxK6.SelectedIndex,
-                comboBoxK7.SelectedIndex, comboBoxK8.SelectedIndex, comboBoxK9.SelectedIndex,
+                comboBoxK7.SelectedIndex, textBoxAreaWindows.Text, comboBoxK9.SelectedIndex,
                 comboBoxK10.SelectedIndex) + " кВт/ч";
         }
+
         #endregion
 
         private void textBoxAreaHouse_KeyPress(object sender, KeyPressEventArgs e)
@@ -171,6 +171,11 @@ namespace CalculateTheHeat
             {
                 e.Handled = true;
             }
+        }
+
+        private void textBoxAreaWindows_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            CheckText(sender, e);
         }
     }
 }
