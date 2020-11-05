@@ -375,7 +375,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(407, 314);
+            this.textBox1.Location = new System.Drawing.Point(609, 249);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 38;
@@ -383,7 +383,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(406, 297);
+            this.label9.Location = new System.Drawing.Point(404, 252);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(172, 13);
             this.label9.TabIndex = 37;
@@ -499,7 +499,7 @@
             "0,21-0,3",
             "0,31-0,4",
             "0,41-0,5"});
-            this.comboBoxK8.Location = new System.Drawing.Point(407, 273);
+            this.comboBoxK8.Location = new System.Drawing.Point(282, 361);
             this.comboBoxK8.Name = "comboBoxK8";
             this.comboBoxK8.Size = new System.Drawing.Size(348, 21);
             this.comboBoxK8.TabIndex = 30;
@@ -516,7 +516,7 @@
             // labelK8
             // 
             this.labelK8.AutoSize = true;
-            this.labelK8.Location = new System.Drawing.Point(406, 244);
+            this.labelK8.Location = new System.Drawing.Point(281, 332);
             this.labelK8.Name = "labelK8";
             this.labelK8.Size = new System.Drawing.Size(261, 26);
             this.labelK8.TabIndex = 29;
@@ -655,9 +655,7 @@
             this.textBoxAreaHouse.Name = "textBoxAreaHouse";
             this.textBoxAreaHouse.Size = new System.Drawing.Size(100, 20);
             this.textBoxAreaHouse.TabIndex = 4;
-            this.textBoxAreaHouse.Click += new System.EventHandler(this.textBoxAreaHouse_Click);
             this.textBoxAreaHouse.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAreaHouse_KeyPress);
-            this.textBoxAreaHouse.Leave += new System.EventHandler(this.textBoxAreaHouse_Leave);
             // 
             // labelAreaHouse
             // 

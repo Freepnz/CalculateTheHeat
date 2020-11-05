@@ -32,7 +32,14 @@ namespace CalculateTheHeat
 
         public int CalculateBoilerArea(string areaValue, int reservPowerValue)
         {
-            areaHouse = Convert.ToDecimal(areaValue);
+            //areaHouse = Convert.ToDecimal(areaValue);
+            if (areaValue == "")
+            {
+                areaHouse = 0;
+            }
+            else
+                areaHouse = Convert.ToDecimal(areaValue);
+
 
             switch (reservPowerValue)
             {

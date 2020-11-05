@@ -12,12 +12,10 @@ namespace CalculateTheHeat
 {
     public partial class BoilerForm : Form
     {
-
         public BoilerForm()
         {
             InitializeComponent();
             comboBoxReservePower.SelectedIndex = 1;
-            textBoxAreaHouse.Text = "0";
             labelCaclulateAreaResult.Text = "";
             labelCalculateVolumeResult.Text = "";
             comboBoxHeightWall.SelectedIndex = 0;
@@ -145,26 +143,34 @@ namespace CalculateTheHeat
 
         private void textBoxAreaHouse_KeyPress(object sender, KeyPressEventArgs e)
         {
-            char number = e.KeyChar;
+            CheckText(sender, e);
+        }
 
-            if (!Char.IsDigit(number) && number != 8) // цифры, клавиша BackSpace
+        private void CheckText(object sender, KeyPressEventArgs e)
+        {
+            //проверка, содержит ли текст ,
+            string checkText = textBoxAreaHouse.Text;
+            int z = 0;
+
+            for (int i = 0; i < checkText.Length; i++)
+            {
+                if (checkText[i] == ',')
+                {
+                    z++;
+                }
+            }
+
+            if (z < 1 || e.KeyChar != ',')
+            {
+                if (!Char.IsDigit(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != 44) // цифры, клавиша BackSpace
+                {
+                    e.Handled = true;
+                }
+            }
+            else
             {
                 e.Handled = true;
             }
         }
-
-        private void textBoxAreaHouse_Click(object sender, EventArgs e)
-        {
-            textBoxAreaHouse.Text = "";
-        }
-
-        private void textBoxAreaHouse_Leave(object sender, EventArgs e)
-        {
-            if (textBoxAreaHouse.Text == "")
-            {
-                textBoxAreaHouse.Text = "0";
-            }
-        }
-
     }
 }
