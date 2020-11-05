@@ -16,23 +16,24 @@ namespace CalculateTheHeat
         public BoilerForm()
         {
             InitializeComponent();
-            comboBoxReservePower.Text = "20";
+            comboBoxReservePower.SelectedIndex = 1;
             textBoxAreaHouse.Text = "0";
             labelCaclulateAreaResult.Text = "";
             labelCalculateVolumeResult.Text = "";
-            comboBoxHeightWall.Text = "2,7";
-            comboBoxWallMaterial.Text = "Кирпичный дом";
+            comboBoxHeightWall.SelectedIndex = 0;
+            comboBoxWallMaterial.SelectedIndex = 0;
             labelVolumeAttention.Text = "";
-            comboBoxK1.Text = "Одна";
-            comboBoxK2.Text = "Север, северо-восток или восток";
-            comboBoxK3.Text = "Простые, не утепленные стены";
-            comboBoxK4.Text = "-35°С и менее";
-            comboBoxK5.Text = "до 2,7 м – 1,0";
-            comboBoxK6.Text = "холодное, неотапливаемое помещение/чердак";
-            comboBoxK7.Text = "Стеклопакеты обычные (в том числе и деревянные) двойные окна";
-            comboBoxK8.Text = "менее 0,1";
-            comboBoxK9.Text = "практически не прикрыт подоконником, не прикрыт экраном";
-            comboBoxK10.Text = "диагональный, где подача сверху, обратка снизу";
+            comboBoxK1.SelectedIndex = 0;
+            comboBoxK2.SelectedIndex = 0;
+            comboBoxK3.SelectedIndex = 0;
+            comboBoxK4.SelectedIndex = 0;
+            comboBoxK5.SelectedIndex = 0;
+            comboBoxK6.SelectedIndex = 0;
+            comboBoxK7.SelectedIndex = 0;
+            comboBoxK8.SelectedIndex = 0;
+            comboBoxK9.SelectedIndex = 0;
+            comboBoxK10.SelectedIndex = 0;
+
         }
         #region Пояснения коэфициентов
         /*k1 – к-во внешних стен в помещения (стен, граничащих с улицей):
@@ -102,8 +103,34 @@ namespace CalculateTheHeat
             CalculateBoiler calculateBoilerArea = new CalculateBoiler();
 
             labelCaclulateAreaResult.Text = "Для отопления дома площадью " + textBoxAreaHouse.Text + " кв.м., необходим котёл мощностью " + 
-                calculateBoilerArea.CalculateBoilerArea(textBoxAreaHouse.Text, comboBoxReservePower.Text) + " кВт/ч";
+                calculateBoilerArea.CalculateBoilerArea(textBoxAreaHouse.Text, comboBoxReservePower.SelectedIndex) + " кВт/ч";
         }
+
+        #endregion
+
+        #region Расчёт по объёму помещений
+
+        private void buttonCalculateVolume_Click(object sender, EventArgs e)
+        {
+            CalculateBoiler calculateBoilerVolume = new CalculateBoiler();
+            labelCalculateVolumeResult.Text = "Для отопления квартиры площадью " + textBoxAreaHouse.Text + " кв.м., высотой потолков " + 
+                comboBoxK1.Text + " м, необходим котёл мощностью " +
+                calculateBoilerVolume.CalculateBoilerHeightWall(textBoxAreaHouse.Text, Convert.ToDecimal(comboBoxHeightWall.Text), comboBoxWallMaterial.Text) + " кВт/ч";
+
+            //Убрать управление элементом из кнопки
+            if (calculateBoilerVolume.HeightWall > 3)
+            {
+                labelVolumeAttention.Text = "Внимание! При высоте потолков свыше 3 м, значения сильно усредняются...";
+            }
+            else
+                labelVolumeAttention.Text = "";
+        }
+        #endregion
+
+        #region Расчёт с учётом всех особенностей
+
+
+        #endregion
 
         private void textBoxAreaHouse_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -127,26 +154,6 @@ namespace CalculateTheHeat
                 textBoxAreaHouse.Text = "0";
             }
         }
-        #endregion
-
-        #region Расчёт по объёму помещений
-
-        private void buttonCalculateVolume_Click(object sender, EventArgs e)
-        {
-            CalculateBoiler calculateBoilerVolume = new CalculateBoiler();
-            labelCalculateVolumeResult.Text = "Для отопления квартиры площадью " + textBoxAreaHouse.Text + " кв.м., высотой потолков " + 
-                comboBoxK1.Text + " м, необходим котёл мощностью " +
-                calculateBoilerVolume.CalculateBoilerHeightWall(textBoxAreaHouse.Text, Convert.ToDecimal(comboBoxHeightWall.Text), comboBoxWallMaterial.Text) + " кВт/ч";
-
-            //Убрать управление элементом из кнопки
-            if (calculateBoilerVolume.HeightWall > 3)
-            {
-                labelVolumeAttention.Text = "Внимание! При высоте потолков свыше 3 м, значения сильно усредняются...";
-            }
-            else
-                labelVolumeAttention.Text = "";
-        }
-        #endregion
 
     }
 }

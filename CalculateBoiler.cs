@@ -20,23 +20,17 @@ namespace CalculateTheHeat
         {
         }
 
-        public int CalculateBoilerArea(string areaValue, string reservPowerValue)
+        public int CalculateBoilerArea(string areaValue, int reservPowerValue)
         {
             areaHouse = Convert.ToDecimal(areaValue);
 
             switch (reservPowerValue)
             {
-                case "10":
+                case 0:
                     reservPower = 1.1M;
                     break;
-                case "15":
-                    reservPower = 1.15M;
-                    break;
-                case "20":
+                case 1:
                     reservPower = 1.2M;
-                    break;
-                case "25":
-                    reservPower = 1.25M;
                     break;
                 default:
                     break;
@@ -55,6 +49,8 @@ namespace CalculateTheHeat
             return Convert.ToInt32(heightWall * areaHouse * materialWall);
         }
 
+        
+        
         private void MaerialWallCoef(string Value)
         {
             if (Value == "Кирпичный дом")
