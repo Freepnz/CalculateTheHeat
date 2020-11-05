@@ -77,12 +77,18 @@
             this.comboBoxK4 = new System.Windows.Forms.ComboBox();
             this.textBoxAreaHouse = new System.Windows.Forms.TextBox();
             this.labelAreaHouse = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.Меню = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItemBack = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItemSaveResult = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItemClose = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabPage3.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -91,7 +97,7 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tabControl1.Location = new System.Drawing.Point(0, 38);
+            this.tabControl1.Location = new System.Drawing.Point(0, 63);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(800, 426);
@@ -129,7 +135,7 @@
             // labelCaclulateAreaResult
             // 
             this.labelCaclulateAreaResult.AutoSize = true;
-            this.labelCaclulateAreaResult.Location = new System.Drawing.Point(88, 287);
+            this.labelCaclulateAreaResult.Location = new System.Drawing.Point(26, 370);
             this.labelCaclulateAreaResult.Name = "labelCaclulateAreaResult";
             this.labelCaclulateAreaResult.Size = new System.Drawing.Size(37, 13);
             this.labelCaclulateAreaResult.TabIndex = 8;
@@ -248,7 +254,7 @@
             // 
             this.labelVolumeAttention.AutoSize = true;
             this.labelVolumeAttention.ForeColor = System.Drawing.Color.Red;
-            this.labelVolumeAttention.Location = new System.Drawing.Point(171, 370);
+            this.labelVolumeAttention.Location = new System.Drawing.Point(30, 341);
             this.labelVolumeAttention.Name = "labelVolumeAttention";
             this.labelVolumeAttention.Size = new System.Drawing.Size(49, 13);
             this.labelVolumeAttention.TabIndex = 17;
@@ -268,7 +274,7 @@
             // labelCalculateVolumeResult
             // 
             this.labelCalculateVolumeResult.AutoSize = true;
-            this.labelCalculateVolumeResult.Location = new System.Drawing.Point(171, 340);
+            this.labelCalculateVolumeResult.Location = new System.Drawing.Point(30, 370);
             this.labelCalculateVolumeResult.Name = "labelCalculateVolumeResult";
             this.labelCalculateVolumeResult.Size = new System.Drawing.Size(37, 13);
             this.labelCalculateVolumeResult.TabIndex = 14;
@@ -447,7 +453,7 @@
             // labelCalculateAllFeaturesResult
             // 
             this.labelCalculateAllFeaturesResult.AutoSize = true;
-            this.labelCalculateAllFeaturesResult.Location = new System.Drawing.Point(121, 370);
+            this.labelCalculateAllFeaturesResult.Location = new System.Drawing.Point(26, 367);
             this.labelCalculateAllFeaturesResult.Name = "labelCalculateAllFeaturesResult";
             this.labelCalculateAllFeaturesResult.Size = new System.Drawing.Size(37, 13);
             this.labelCalculateAllFeaturesResult.TabIndex = 22;
@@ -623,7 +629,7 @@
             // 
             // textBoxAreaHouse
             // 
-            this.textBoxAreaHouse.Location = new System.Drawing.Point(188, 12);
+            this.textBoxAreaHouse.Location = new System.Drawing.Point(189, 37);
             this.textBoxAreaHouse.Name = "textBoxAreaHouse";
             this.textBoxAreaHouse.Size = new System.Drawing.Size(100, 20);
             this.textBoxAreaHouse.TabIndex = 4;
@@ -632,21 +638,61 @@
             // labelAreaHouse
             // 
             this.labelAreaHouse.AutoSize = true;
-            this.labelAreaHouse.Location = new System.Drawing.Point(10, 15);
+            this.labelAreaHouse.Location = new System.Drawing.Point(11, 40);
             this.labelAreaHouse.Name = "labelAreaHouse";
             this.labelAreaHouse.Size = new System.Drawing.Size(103, 13);
             this.labelAreaHouse.TabIndex = 3;
             this.labelAreaHouse.Text = "Площадь дома, м2";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Меню});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.TabIndex = 5;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // Меню
+            // 
+            this.Меню.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripMenuItemBack,
+            this.ToolStripMenuItemSaveResult,
+            this.ToolStripMenuItemClose});
+            this.Меню.Name = "Меню";
+            this.Меню.Size = new System.Drawing.Size(53, 20);
+            this.Меню.Text = "Меню";
+            // 
+            // ToolStripMenuItemBack
+            // 
+            this.ToolStripMenuItemBack.Name = "ToolStripMenuItemBack";
+            this.ToolStripMenuItemBack.Size = new System.Drawing.Size(188, 22);
+            this.ToolStripMenuItemBack.Text = "Назад";
+            // 
+            // ToolStripMenuItemSaveResult
+            // 
+            this.ToolStripMenuItemSaveResult.Name = "ToolStripMenuItemSaveResult";
+            this.ToolStripMenuItemSaveResult.Size = new System.Drawing.Size(188, 22);
+            this.ToolStripMenuItemSaveResult.Text = "Сохранить результат";
+            // 
+            // ToolStripMenuItemClose
+            // 
+            this.ToolStripMenuItemClose.Name = "ToolStripMenuItemClose";
+            this.ToolStripMenuItemClose.Size = new System.Drawing.Size(188, 22);
+            this.ToolStripMenuItemClose.Text = "Выход";
+            // 
             // BoilerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 464);
+            this.ClientSize = new System.Drawing.Size(800, 489);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.textBoxAreaHouse);
             this.Controls.Add(this.labelAreaHouse);
+            this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "BoilerForm";
             this.Text = "Расчёт бойлера";
             this.tabControl1.ResumeLayout(false);
@@ -658,6 +704,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -713,5 +761,10 @@
         private System.Windows.Forms.ComboBox comboBoxK5;
         private System.Windows.Forms.TextBox textBoxAreaWindows;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem Меню;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemClose;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemBack;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemSaveResult;
     }
 }
