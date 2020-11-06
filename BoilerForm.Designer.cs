@@ -52,6 +52,7 @@
             this.labelWallMaterial = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.buttonSaveResultAllFeatures = new System.Windows.Forms.Button();
             this.textBoxAreaWindows = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.labelK5 = new System.Windows.Forms.Label();
@@ -80,7 +81,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.Меню = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItemBack = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolStripMenuItemSaveResult = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItemClose = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -143,13 +143,13 @@
             // 
             // buttonCalculateArea
             // 
-            this.buttonCalculateArea.Location = new System.Drawing.Point(333, 239);
+            this.buttonCalculateArea.Location = new System.Drawing.Point(218, 267);
             this.buttonCalculateArea.Name = "buttonCalculateArea";
             this.buttonCalculateArea.Size = new System.Drawing.Size(122, 37);
             this.buttonCalculateArea.TabIndex = 8;
             this.buttonCalculateArea.Text = "Расчитать";
             this.buttonCalculateArea.UseVisualStyleBackColor = true;
-            this.buttonCalculateArea.Click += new System.EventHandler(this.buttonCalculateArea_Click);
+            this.buttonCalculateArea.Click += new System.EventHandler(this.ButtonCalculateArea_Click);
             // 
             // label2
             // 
@@ -282,13 +282,13 @@
             // 
             // buttonCalculateVolume
             // 
-            this.buttonCalculateVolume.Location = new System.Drawing.Point(271, 289);
+            this.buttonCalculateVolume.Location = new System.Drawing.Point(200, 289);
             this.buttonCalculateVolume.Name = "buttonCalculateVolume";
             this.buttonCalculateVolume.Size = new System.Drawing.Size(122, 37);
             this.buttonCalculateVolume.TabIndex = 15;
             this.buttonCalculateVolume.Text = "Расчитать";
             this.buttonCalculateVolume.UseVisualStyleBackColor = true;
-            this.buttonCalculateVolume.Click += new System.EventHandler(this.buttonCalculateVolume_Click);
+            this.buttonCalculateVolume.Click += new System.EventHandler(this.ButtonCalculateVolume_Click);
             // 
             // label4
             // 
@@ -344,6 +344,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.buttonSaveResultAllFeatures);
             this.tabPage3.Controls.Add(this.textBoxAreaWindows);
             this.tabPage3.Controls.Add(this.label9);
             this.tabPage3.Controls.Add(this.labelK5);
@@ -375,13 +376,23 @@
             this.tabPage3.Text = "Расчёт с учётом всех особенностей";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // buttonSaveResultAllFeatures
+            // 
+            this.buttonSaveResultAllFeatures.Location = new System.Drawing.Point(407, 297);
+            this.buttonSaveResultAllFeatures.Name = "buttonSaveResultAllFeatures";
+            this.buttonSaveResultAllFeatures.Size = new System.Drawing.Size(122, 37);
+            this.buttonSaveResultAllFeatures.TabIndex = 41;
+            this.buttonSaveResultAllFeatures.Text = "Сохранить результат";
+            this.buttonSaveResultAllFeatures.UseVisualStyleBackColor = true;
+            this.buttonSaveResultAllFeatures.Click += new System.EventHandler(this.buttonSaveResultAllFeatures_Click);
+            // 
             // textBoxAreaWindows
             // 
             this.textBoxAreaWindows.Location = new System.Drawing.Point(609, 249);
             this.textBoxAreaWindows.Name = "textBoxAreaWindows";
             this.textBoxAreaWindows.Size = new System.Drawing.Size(100, 20);
             this.textBoxAreaWindows.TabIndex = 38;
-            this.textBoxAreaWindows.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAreaWindows_KeyPress);
+            this.textBoxAreaWindows.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxAreaWindows_KeyPress);
             // 
             // label9
             // 
@@ -397,9 +408,9 @@
             this.labelK5.AutoSize = true;
             this.labelK5.Location = new System.Drawing.Point(26, 186);
             this.labelK5.Name = "labelK5";
-            this.labelK5.Size = new System.Drawing.Size(196, 13);
+            this.labelK5.Size = new System.Drawing.Size(193, 13);
             this.labelK5.TabIndex = 35;
-            this.labelK5.Text = "Коэф., учитывающий высоту потолка\r\n";
+            this.labelK5.Text = "Коэф. учитывающий высоту потолка\r\n";
             // 
             // comboBoxK5
             // 
@@ -446,9 +457,9 @@
             this.labelK10.AutoSize = true;
             this.labelK10.Location = new System.Drawing.Point(26, 233);
             this.labelK10.Name = "labelK10";
-            this.labelK10.Size = new System.Drawing.Size(208, 13);
+            this.labelK10.Size = new System.Drawing.Size(176, 13);
             this.labelK10.TabIndex = 33;
-            this.labelK10.Text = "Учет способа подключения радиаторов";
+            this.labelK10.Text = "Cпособ подключения радиаторов";
             // 
             // labelCalculateAllFeaturesResult
             // 
@@ -475,13 +486,13 @@
             // 
             // buttonCalculateAllFeaturesReslt
             // 
-            this.buttonCalculateAllFeaturesReslt.Location = new System.Drawing.Point(662, 355);
+            this.buttonCalculateAllFeaturesReslt.Location = new System.Drawing.Point(255, 297);
             this.buttonCalculateAllFeaturesReslt.Name = "buttonCalculateAllFeaturesReslt";
             this.buttonCalculateAllFeaturesReslt.Size = new System.Drawing.Size(122, 37);
             this.buttonCalculateAllFeaturesReslt.TabIndex = 23;
             this.buttonCalculateAllFeaturesReslt.Text = "Расчитать";
             this.buttonCalculateAllFeaturesReslt.UseVisualStyleBackColor = true;
-            this.buttonCalculateAllFeaturesReslt.Click += new System.EventHandler(this.buttonCalculateAllFeaturesReslt_Click);
+            this.buttonCalculateAllFeaturesReslt.Click += new System.EventHandler(this.ButtonCalculateAllFeaturesReslt_Click);
             // 
             // labelK9
             // 
@@ -499,7 +510,7 @@
             this.labelK1.Name = "labelK1";
             this.labelK1.Size = new System.Drawing.Size(184, 13);
             this.labelK1.TabIndex = 13;
-            this.labelK1.Text = "Кол-во внешних стен в помещения\r\n";
+            this.labelK1.Text = "Кол-во внешних стен в помещении";
             // 
             // comboBoxK1
             // 
@@ -586,7 +597,7 @@
             this.labelK6.Name = "labelK6";
             this.labelK6.Size = new System.Drawing.Size(221, 13);
             this.labelK6.TabIndex = 25;
-            this.labelK6.Text = "Kоэф, учитывающий теплопотери потолка\r\n";
+            this.labelK6.Text = "Kоэф. учитывающий теплопотери потолка\r\n";
             // 
             // comboBoxK3
             // 
@@ -633,7 +644,7 @@
             this.textBoxAreaHouse.Name = "textBoxAreaHouse";
             this.textBoxAreaHouse.Size = new System.Drawing.Size(100, 20);
             this.textBoxAreaHouse.TabIndex = 4;
-            this.textBoxAreaHouse.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAreaHouse_KeyPress);
+            this.textBoxAreaHouse.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxAreaHouse_KeyPress);
             // 
             // labelAreaHouse
             // 
@@ -658,7 +669,6 @@
             // 
             this.Меню.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToolStripMenuItemBack,
-            this.ToolStripMenuItemSaveResult,
             this.ToolStripMenuItemClose});
             this.Меню.Name = "Меню";
             this.Меню.Size = new System.Drawing.Size(53, 20);
@@ -667,21 +677,14 @@
             // ToolStripMenuItemBack
             // 
             this.ToolStripMenuItemBack.Name = "ToolStripMenuItemBack";
-            this.ToolStripMenuItemBack.Size = new System.Drawing.Size(188, 22);
+            this.ToolStripMenuItemBack.Size = new System.Drawing.Size(108, 22);
             this.ToolStripMenuItemBack.Text = "Назад";
             this.ToolStripMenuItemBack.Click += new System.EventHandler(this.ToolStripMenuItemBack_Click);
-            // 
-            // ToolStripMenuItemSaveResult
-            // 
-            this.ToolStripMenuItemSaveResult.Name = "ToolStripMenuItemSaveResult";
-            this.ToolStripMenuItemSaveResult.Size = new System.Drawing.Size(188, 22);
-            this.ToolStripMenuItemSaveResult.Text = "Сохранить результат";
-            this.ToolStripMenuItemSaveResult.Click += new System.EventHandler(this.ToolStripMenuItemSaveResult_Click);
             // 
             // ToolStripMenuItemClose
             // 
             this.ToolStripMenuItemClose.Name = "ToolStripMenuItemClose";
-            this.ToolStripMenuItemClose.Size = new System.Drawing.Size(188, 22);
+            this.ToolStripMenuItemClose.Size = new System.Drawing.Size(108, 22);
             this.ToolStripMenuItemClose.Text = "Выход";
             this.ToolStripMenuItemClose.Click += new System.EventHandler(this.ToolStripMenuItemClose_Click);
             // 
@@ -769,6 +772,6 @@
         private System.Windows.Forms.ToolStripMenuItem Меню;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemClose;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemBack;
-        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemSaveResult;
+        private System.Windows.Forms.Button buttonSaveResultAllFeatures;
     }
 }

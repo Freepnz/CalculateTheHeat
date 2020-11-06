@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -190,6 +191,41 @@ namespace CalculateTheHeat
             }
             else
                 materialWall = 0.041M;
+        }
+
+        public void SaveResultInFile(string result, string K1val, string K2val, string K3val, string K5val, string K10val, string K7val, string K9val, string K6val, string K4val, string areaWindows)
+        {
+            string path = @"C:\\" + "Дом" + areaHouse + "кв" + ".txt";
+
+            using (StreamWriter streamWriter = new StreamWriter(path, true))
+            {
+                streamWriter.WriteLine();
+                streamWriter.WriteLine(DateTime.Now);
+                streamWriter.WriteLine(result);
+                streamWriter.WriteLine("Параметры:");
+                streamWriter.WriteLine("Кол-во внешних стен в помещении:");
+                streamWriter.WriteLine(K1val);
+                streamWriter.WriteLine("Ориентация помещения:");
+                streamWriter.WriteLine(K2val);
+                streamWriter.WriteLine("теплоизоляции стен:");
+                streamWriter.WriteLine(K3val);
+                streamWriter.WriteLine("Коэф. учитывающий высоту потолка:");
+                streamWriter.WriteLine(K5val);
+                streamWriter.WriteLine("Cпособ подключения радиаторов:");
+                streamWriter.WriteLine(K10val);
+                streamWriter.WriteLine("Учет теплопотерь окон (тип и к-во стеклопакетов):");
+                streamWriter.WriteLine(K7val);
+                streamWriter.WriteLine("Учет расположения батареи и наличия экрана:");
+                streamWriter.WriteLine(K9val);
+                streamWriter.WriteLine("Kоэф. учитывающий теплопотери потолка:");
+                streamWriter.WriteLine(K6val);
+                streamWriter.WriteLine("Подробный учет климатических условий локации (уличная температура воздуха в самую холодную неделю зимы):");
+                streamWriter.WriteLine(K4val);
+                streamWriter.WriteLine("Общая площадь остекления, м2:");
+                streamWriter.WriteLine(areaWindows);
+            }
+
+            MessageBox.Show(@"Сохранённая информация расположена " + path);
         }
     }
 }

@@ -17,9 +17,11 @@ namespace CalculateTheHeat
             InitializeComponent();
         }
 
+        readonly BoilerForm calculateBoiler = new BoilerForm();
+
         private void SelectionBoiler_Click(object sender, EventArgs e)
         {
-            BoilerForm calculateBoiler = new BoilerForm();
+            //BoilerForm calculateBoiler = new BoilerForm();
             calculateBoiler.Show();
             this.Hide();
         }
