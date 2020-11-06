@@ -177,5 +177,22 @@ namespace CalculateTheHeat
         {
             CheckText(sender, e);
         }
+
+        private void ToolStripMenuItemBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            MainForm mainForm = new MainForm();
+            mainForm.Show();
+        }
+
+        private void ToolStripMenuItemClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void ToolStripMenuItemSaveResult_Click(object sender, EventArgs e)
+        {
+            //SaveResult
+        }
     }
 }

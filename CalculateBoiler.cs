@@ -24,7 +24,6 @@ namespace CalculateTheHeat
 
         public int CalculateBoilerArea(string areaValue, int reservPowerValue)
         {
-            //areaHouse = Convert.ToDecimal(areaValue);
             if (areaValue == "")
             {
                 areaHouse = 0;
@@ -50,7 +49,12 @@ namespace CalculateTheHeat
 
         public int CalculateBoilerHeightWall(string areaValue, decimal heigthWallValue, string materialWallValue)
         {
-            areaHouse = Convert.ToDecimal(areaValue);
+            if (areaValue == "")
+            {
+                areaHouse = 0;
+            }
+            else
+                areaHouse = Convert.ToDecimal(areaValue);
             heightWall = heigthWallValue;
             MaerialWallCoef(materialWallValue);
 
@@ -59,7 +63,12 @@ namespace CalculateTheHeat
 
         public int CalculateBoilerAllFeatures(string areaValue, int k1val, int k2val, int k3val, int k4val, int k5val, int k6val, int k7val, string k8val, int k9val, int k10val)
         {
-            areaHouse = Convert.ToDecimal(areaValue);
+            if (areaValue == "")
+            {
+                areaHouse = 0;
+            }
+            else
+                areaHouse = Convert.ToDecimal(areaValue);
             #region Коэффициенты К
             switch (k1val)
             {

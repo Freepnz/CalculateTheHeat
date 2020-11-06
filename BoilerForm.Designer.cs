@@ -669,18 +669,21 @@
             this.ToolStripMenuItemBack.Name = "ToolStripMenuItemBack";
             this.ToolStripMenuItemBack.Size = new System.Drawing.Size(188, 22);
             this.ToolStripMenuItemBack.Text = "Назад";
+            this.ToolStripMenuItemBack.Click += new System.EventHandler(this.ToolStripMenuItemBack_Click);
             // 
             // ToolStripMenuItemSaveResult
             // 
             this.ToolStripMenuItemSaveResult.Name = "ToolStripMenuItemSaveResult";
             this.ToolStripMenuItemSaveResult.Size = new System.Drawing.Size(188, 22);
             this.ToolStripMenuItemSaveResult.Text = "Сохранить результат";
+            this.ToolStripMenuItemSaveResult.Click += new System.EventHandler(this.ToolStripMenuItemSaveResult_Click);
             // 
             // ToolStripMenuItemClose
             // 
             this.ToolStripMenuItemClose.Name = "ToolStripMenuItemClose";
             this.ToolStripMenuItemClose.Size = new System.Drawing.Size(188, 22);
             this.ToolStripMenuItemClose.Text = "Выход";
+            this.ToolStripMenuItemClose.Click += new System.EventHandler(this.ToolStripMenuItemClose_Click);
             // 
             // BoilerForm
             // 
@@ -694,6 +697,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "BoilerForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Расчёт бойлера";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
