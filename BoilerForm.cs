@@ -166,7 +166,7 @@ namespace CalculateTheHeat
                 if (textBoxAreaHouse.Text != "")
                 {
                     labelCaclulateAreaResult.Text = "Для отопления дома площадью " + textBoxAreaHouse.Text + " кв.м., необходим котёл мощностью " +
-                        calculateBoilerArea.CalculateBoilerArea(textBoxAreaHouse.Text, comboBoxReservePower.SelectedIndex) + " кВт/ч";
+                        calculateBoilerArea.CalcBoiler(textBoxAreaHouse.Text, comboBoxReservePower.SelectedIndex) + " кВт/ч";
                 }
                 else
                     MessageBox.Show("Введите полощадь отапливаемого помещения", "Внимание");
@@ -178,7 +178,7 @@ namespace CalculateTheHeat
                 {
                     labelCalculateVolumeResult.Text = "Для отопления квартиры площадью " + textBoxAreaHouse.Text + " кв.м., высотой потолков " +
                         comboBoxK1.Text + " м, необходим котёл мощностью " +
-                        calculateBoilerVolume.CalculateBoilerHeightWall(textBoxAreaHouse.Text, Convert.ToDecimal(comboBoxHeightWall.Text), comboBoxWallMaterial.Text) + " кВт/ч";
+                        calculateBoilerVolume.CalcBoiler(textBoxAreaHouse.Text, Convert.ToDecimal(comboBoxHeightWall.Text), comboBoxWallMaterial.Text) + " кВт/ч";
                 }
                 else
                     MessageBox.Show("Введите полощадь отапливаемого помещения", "Внимание");
@@ -196,7 +196,7 @@ namespace CalculateTheHeat
                 if (textBoxAreaHouse.Text != "")
                 {
                     labelCalculateAllFeaturesResult.Text = "Для отопления дома площадью " + textBoxAreaHouse.Text + " кв.м., необходим котёл мощностью " +
-                        calculateBoilerAllFeatures.CalculateBoilerAllFeatures(textBoxAreaHouse.Text,
+                        calculateBoilerAllFeatures.CalcBoiler(textBoxAreaHouse.Text,
                         comboBoxK1.SelectedIndex, comboBoxK2.SelectedIndex, comboBoxK3.SelectedIndex,
                         comboBoxK4.SelectedIndex, comboBoxK5.SelectedIndex, comboBoxK6.SelectedIndex,
                         comboBoxK7.SelectedIndex, textBoxAreaWindows.Text, comboBoxK9.SelectedIndex,

@@ -24,7 +24,7 @@ namespace CalculateTheHeat
 
         }
 
-        public int CalculateBoilerArea(string areaValue, int reservPowerValue)
+        public int CalcBoiler(string areaValue, int reservPowerValue)
         {
             if (areaValue == "")
             {
@@ -49,7 +49,7 @@ namespace CalculateTheHeat
             return result;
         }   //Расчёт можности котла по площади
 
-        public int CalculateBoilerHeightWall(string areaValue, decimal heigthWallValue, string materialWallValue)
+        public int CalcBoiler(string areaValue, decimal heigthWallValue, string materialWallValue)
         {
             if (areaValue == "")
             {
@@ -63,7 +63,7 @@ namespace CalculateTheHeat
             return Convert.ToInt32(heightWall * areaHouse * materialWall);
         }   //Расчёт можности котла по объёму помещения
 
-        public int CalculateBoilerAllFeatures(string areaValue, int k1val, int k2val, int k3val, int k4val, int k5val, int k6val, int k7val, string k8val, int k9val, int k10val)
+        public int CalcBoiler(string areaValue, int k1val, int k2val, int k3val, int k4val, int k5val, int k6val, int k7val, string k8val, int k9val, int k10val)
         {
             if (areaValue == "")
             {
