@@ -13,9 +13,9 @@ namespace CalculateTheHeat
 {
     public partial class BoilerForm : Form
     {
-        readonly CalculateBoiler calculateBoilerArea = new CalculateBoiler();
-        readonly CalculateBoiler calculateBoilerVolume = new CalculateBoiler();
-        readonly CalculateBoiler calculateBoilerAllFeatures = new CalculateBoiler();
+
+        readonly CalculateBoiler calculateBoiler = new CalculateBoiler();
+
 
         public BoilerForm()
         {
@@ -153,20 +153,20 @@ namespace CalculateTheHeat
         private void ButtonSaveResultAllFeatures_Click(object sender, EventArgs e)
         {
             //SaveResult
-            calculateBoilerAllFeatures.SaveResultInFile(labelCalculateAllFeaturesResult.Text, comboBoxK1.Text,
+            calculateBoiler.SaveResultInFile(labelCalculateAllFeaturesResult.Text, comboBoxK1.Text,
                 comboBoxK2.Text, comboBoxK3.Text, comboBoxK5.Text, comboBoxK10.Text,
                 comboBoxK7.Text, comboBoxK9.Text, comboBoxK6.Text, comboBoxK4.Text,
                 textBoxAreaWindows.Text);
         }
 
-        private void ButtonCalculateResult_Click(object sender, EventArgs e)    //Общая кнопка Расчитать
+        public void ButtonCalculateResult_Click(object sender, EventArgs e)    //Общая кнопка Расчитать
         {
             if (tabControl1.SelectedTab == tabPage1)
             {
                 if (textBoxAreaHouse.Text != "")
                 {
                     labelCaclulateAreaResult.Text = "Для отопления дома площадью " + textBoxAreaHouse.Text + " кв.м., необходим котёл мощностью " +
-                        calculateBoilerArea.CalcBoiler(textBoxAreaHouse.Text, comboBoxReservePower.SelectedIndex) + " кВт/ч";
+                        calculateBoiler.CalcBoiler(textBoxAreaHouse.Text, comboBoxReservePower.SelectedIndex) + " кВт/ч";
                 }
                 else
                     MessageBox.Show("Введите полощадь отапливаемого помещения", "Внимание");
@@ -174,17 +174,18 @@ namespace CalculateTheHeat
 
             if (tabControl1.SelectedTab == tabPage2)
             {
+
                 if (textBoxAreaHouse.Text != "")
                 {
                     labelCalculateVolumeResult.Text = "Для отопления квартиры площадью " + textBoxAreaHouse.Text + " кв.м., высотой потолков " +
                         comboBoxK1.Text + " м, необходим котёл мощностью " +
-                        calculateBoilerVolume.CalcBoiler(textBoxAreaHouse.Text, Convert.ToDecimal(comboBoxHeightWall.Text), comboBoxWallMaterial.Text) + " кВт/ч";
+                        calculateBoiler.CalcBoiler(textBoxAreaHouse.Text, Convert.ToDecimal(comboBoxHeightWall.Text), comboBoxWallMaterial.Text) + " кВт/ч";
                 }
                 else
                     MessageBox.Show("Введите полощадь отапливаемого помещения", "Внимание");
 
                 //Убрать управление элементом из кнопки
-                if (calculateBoilerVolume.HeightWall > 3)
+                if (calculateBoiler.HeightWall > 3)
                 {
                     labelVolumeAttention.Text = "Внимание! При высоте потолков свыше 3 м, значения сильно усредняются...";
                 }
@@ -196,7 +197,7 @@ namespace CalculateTheHeat
                 if (textBoxAreaHouse.Text != "")
                 {
                     labelCalculateAllFeaturesResult.Text = "Для отопления дома площадью " + textBoxAreaHouse.Text + " кв.м., необходим котёл мощностью " +
-                        calculateBoilerAllFeatures.CalcBoiler(textBoxAreaHouse.Text,
+                        calculateBoiler.CalcBoiler(textBoxAreaHouse.Text,
                         comboBoxK1.SelectedIndex, comboBoxK2.SelectedIndex, comboBoxK3.SelectedIndex,
                         comboBoxK4.SelectedIndex, comboBoxK5.SelectedIndex, comboBoxK6.SelectedIndex,
                         comboBoxK7.SelectedIndex, textBoxAreaWindows.Text, comboBoxK9.SelectedIndex,
