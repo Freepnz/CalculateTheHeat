@@ -213,5 +213,6 @@ namespace CalculateTheHeat
                 comboBoxK7.Text, comboBoxK9.Text, comboBoxK6.Text, comboBoxK4.Text,
                 textBoxAreaWindows.Text);
         }
+        //Тест работы второй ветки для Гитхаба
     }
 }
