@@ -158,6 +158,7 @@ namespace CalculateTheHeat
                 {
                     labelCaclulateAreaResult.Text = "Для отопления дома площадью " + textBoxAreaHouse.Text + " кв.м., необходим котёл мощностью " +
                         calculateBoiler.CalcBoiler(textBoxAreaHouse.Text, comboBoxReservePower.SelectedIndex) + " кВт/ч";
+                    ButtonSaveResult.Visible = true;
                 }
                 else
                     MessageBox.Show("Введите полощадь отапливаемого помещения", "Внимание");
@@ -171,6 +172,7 @@ namespace CalculateTheHeat
                     labelCalculateVolumeResult.Text = "Для отопления квартиры площадью " + textBoxAreaHouse.Text + " кв.м., высотой потолков " +
                         comboBoxK1.Text + " м, необходим котёл мощностью " +
                         calculateBoiler.CalcBoiler(textBoxAreaHouse.Text, Convert.ToDecimal(comboBoxHeightWall.Text), comboBoxWallMaterial.Text) + " кВт/ч";
+                    ButtonSaveResult.Visible = true;
                 }
                 else
                     MessageBox.Show("Введите полощадь отапливаемого помещения", "Внимание");
@@ -183,16 +185,28 @@ namespace CalculateTheHeat
                 else
                     labelVolumeAttention.Text = "";
             }
+
             if (tabControl1.SelectedTab == tabPage3)
             {
                 if (textBoxAreaHouse.Text != "")
                 {
+                    if (textBoxAreaWindows.Text == "" || textBoxAreaWindows.Text == "0")
+                    {
+                        label9.ForeColor = Color.Red;
+                        MessageBox.Show("Принята минимальная пложадь остекления.\nОтсуствие значения, влияет на результат расчёта.","Внимание!");
+                    }
+                    else
+                        label9.ForeColor = Color.Black;
+
                     labelCalculateAllFeaturesResult.Text = "Для отопления дома площадью " + textBoxAreaHouse.Text + " кв.м., необходим котёл мощностью " +
                         calculateBoiler.CalcBoiler(textBoxAreaHouse.Text,
                         comboBoxK1.SelectedIndex, comboBoxK2.SelectedIndex, comboBoxK3.SelectedIndex,
                         comboBoxK4.SelectedIndex, comboBoxK5.SelectedIndex, comboBoxK6.SelectedIndex,
                         comboBoxK7.SelectedIndex, textBoxAreaWindows.Text, comboBoxK9.SelectedIndex,
                         comboBoxK10.SelectedIndex) + " кВт/ч";
+
+                    ButtonSaveResult.Visible = true;
+
                 }
                 else
                     MessageBox.Show("Введите полощадь отапливаемого помещения", "Внимание");
@@ -207,7 +221,6 @@ namespace CalculateTheHeat
                                 }*/
 
             }
-            ButtonSaveResult.Visible = true;
         }
 
         private void ButtonSaveResult_Click(object sender, EventArgs e)
@@ -230,9 +243,31 @@ namespace CalculateTheHeat
             }
         }
 
-        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        private void TabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
             ButtonSaveResult.Visible = false;
+            if (tabControl1.SelectedTab == tabPage1)
+            {
+                if (labelCaclulateAreaResult.Text != "")
+                {
+                    ButtonSaveResult.Visible = true;
+                }
+            }
+            if (tabControl1.SelectedTab == tabPage2)
+            {
+                if (labelCalculateVolumeResult.Text != "")
+                {
+                    ButtonSaveResult.Visible = true;
+                }
+            }
+            if (tabControl1.SelectedTab == tabPage3)
+            {
+                if (labelCalculateAllFeaturesResult.Text != "")
+                {
+                    ButtonSaveResult.Visible = true;
+                }
+            }
+
         }
         //Тест работы второй ветки для Гитхаба
     }

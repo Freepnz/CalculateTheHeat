@@ -99,7 +99,7 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(800, 383);
             this.tabControl1.TabIndex = 0;
-            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.TabControl1_SelectedIndexChanged);
             // 
             // tabPage1
             // 
@@ -132,7 +132,7 @@
             // labelCaclulateAreaResult
             // 
             this.labelCaclulateAreaResult.AutoSize = true;
-            this.labelCaclulateAreaResult.Location = new System.Drawing.Point(40, 275);
+            this.labelCaclulateAreaResult.Location = new System.Drawing.Point(44, 275);
             this.labelCaclulateAreaResult.Name = "labelCaclulateAreaResult";
             this.labelCaclulateAreaResult.Size = new System.Drawing.Size(37, 13);
             this.labelCaclulateAreaResult.TabIndex = 8;

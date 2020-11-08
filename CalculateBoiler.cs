@@ -267,6 +267,6 @@ namespace CalculateTheHeat
 
             MessageBox.Show(@"Сохранённая информация расположена " + path);
         }
-
+        //Тест после слияния веток
     }
 }
