@@ -205,7 +205,7 @@ namespace CalculateTheHeat
             Application.Exit();
         }
 
-        private void buttonSaveResultAllFeatures_Click(object sender, EventArgs e)
+        private void ButtonSaveResultAllFeatures_Click(object sender, EventArgs e)
         {
             //SaveResult
             calculateBoilerAllFeatures.SaveResultInFile(labelCalculateAllFeaturesResult.Text, comboBoxK1.Text,

@@ -21,6 +21,7 @@ namespace CalculateTheHeat
 
         public CalculateBoiler()
         {
+
         }
 
         public int CalculateBoilerArea(string areaValue, int reservPowerValue)
@@ -46,7 +47,7 @@ namespace CalculateTheHeat
 
             int result = Convert.ToInt32((areaHouse / 10) * reservPower);
             return result;
-        }
+        }   //Расчёт можности котла по площади
 
         public int CalculateBoilerHeightWall(string areaValue, decimal heigthWallValue, string materialWallValue)
         {
@@ -60,7 +61,7 @@ namespace CalculateTheHeat
             MaerialWallCoef(materialWallValue);
 
             return Convert.ToInt32(heightWall * areaHouse * materialWall);
-        }
+        }   //Расчёт можности котла по объёму помещения
 
         public int CalculateBoilerAllFeatures(string areaValue, int k1val, int k2val, int k3val, int k4val, int k5val, int k6val, int k7val, string k8val, int k9val, int k10val)
         {
@@ -146,7 +147,7 @@ namespace CalculateTheHeat
             }
             #endregion
             return Convert.ToInt32(100 * areaHouse * k1 * k2 * k3 * k4 * k5 * k6 * k7 * k8 * k9 * k10 / 1000);
-        }
+        }//Расчёт можности котла с учётом всех параметров
 
         private decimal SearchAreaWindows(decimal areaHouse, string k8val)
         {
@@ -181,7 +182,7 @@ namespace CalculateTheHeat
             else
                 return 1.2M;
             }
-        }
+        }   //Расчёт площади остекления
 
         private void MaerialWallCoef(string Value)
         {
@@ -191,7 +192,7 @@ namespace CalculateTheHeat
             }
             else
                 materialWall = 0.041M;
-        }
+        }      //Расчёт коэф материала здания
 
         public void SaveResultInFile(string result, string K1val, string K2val, string K3val, string K5val, string K10val, string K7val, string K9val, string K6val, string K4val, string areaWindows)
         {
@@ -201,6 +202,7 @@ namespace CalculateTheHeat
             {
                 streamWriter.WriteLine();
                 streamWriter.WriteLine(DateTime.Now);
+                streamWriter.WriteLine("Расчёт с учётом всех особенностей:");
                 streamWriter.WriteLine(result);
                 streamWriter.WriteLine("Параметры:");
                 streamWriter.WriteLine("Кол-во внешних стен в помещении:");
@@ -226,6 +228,6 @@ namespace CalculateTheHeat
             }
 
             MessageBox.Show(@"Сохранённая информация расположена " + path);
-        }
+        }   //Сохранение результатов
     }
 }

@@ -384,7 +384,7 @@
             this.buttonSaveResultAllFeatures.TabIndex = 41;
             this.buttonSaveResultAllFeatures.Text = "Сохранить результат";
             this.buttonSaveResultAllFeatures.UseVisualStyleBackColor = true;
-            this.buttonSaveResultAllFeatures.Click += new System.EventHandler(this.buttonSaveResultAllFeatures_Click);
+            this.buttonSaveResultAllFeatures.Click += new System.EventHandler(this.ButtonSaveResultAllFeatures_Click);
             // 
             // textBoxAreaWindows
             // 
