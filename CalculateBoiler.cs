@@ -204,26 +204,26 @@ namespace CalculateTheHeat
                 streamWriter.WriteLine(DateTime.Now);
                 streamWriter.WriteLine("Расчёт котла с учётом всех особенностей:");
                 streamWriter.WriteLine(result);
-                streamWriter.WriteLine("Параметры:");
-                streamWriter.WriteLine("Кол-во внешних стен в помещении:");
+                streamWriter.WriteLine("----------Параметры:");
+                streamWriter.WriteLine("1) Кол-во внешних стен в помещении:");
                 streamWriter.WriteLine(K1val);
-                streamWriter.WriteLine("Ориентация помещения:");
+                streamWriter.WriteLine("2) Ориентация помещения:");
                 streamWriter.WriteLine(K2val);
-                streamWriter.WriteLine("теплоизоляции стен:");
+                streamWriter.WriteLine("3) Теплоизоляции стен:");
                 streamWriter.WriteLine(K3val);
-                streamWriter.WriteLine("Коэф. учитывающий высоту потолка:");
+                streamWriter.WriteLine("4) Коэф. учитывающий высоту потолка:");
                 streamWriter.WriteLine(K5val);
-                streamWriter.WriteLine("Cпособ подключения радиаторов:");
+                streamWriter.WriteLine("5) Cпособ подключения радиаторов:");
                 streamWriter.WriteLine(K10val);
-                streamWriter.WriteLine("Учет теплопотерь окон (тип и к-во стеклопакетов):");
+                streamWriter.WriteLine("6) Учет теплопотерь окон (тип и к-во стеклопакетов):");
                 streamWriter.WriteLine(K7val);
-                streamWriter.WriteLine("Учет расположения батареи и наличия экрана:");
+                streamWriter.WriteLine("6) Учет расположения батареи и наличия экрана:");
                 streamWriter.WriteLine(K9val);
-                streamWriter.WriteLine("Kоэф. учитывающий теплопотери потолка:");
+                streamWriter.WriteLine("7) Kоэф. учитывающий теплопотери потолка:");
                 streamWriter.WriteLine(K6val);
-                streamWriter.WriteLine("Подробный учет климатических условий локации (уличная температура воздуха в самую холодную неделю зимы):");
+                streamWriter.WriteLine("8) Подробный учет климатических условий локации (уличная температура воздуха в самую холодную неделю зимы):");
                 streamWriter.WriteLine(K4val);
-                streamWriter.WriteLine("Общая площадь остекления, м2:");
+                streamWriter.WriteLine("9) Общая площадь остекления, м2:");
                 streamWriter.WriteLine(areaWindows);
             }
 
@@ -240,8 +240,8 @@ namespace CalculateTheHeat
                 streamWriter.WriteLine(DateTime.Now);
                 streamWriter.WriteLine("Расчёт котла по площади дома:");
                 streamWriter.WriteLine(result);
-                streamWriter.WriteLine("Параметры:");
-                streamWriter.WriteLine("Запас можности, %:");
+                streamWriter.WriteLine("----------Параметры:");
+                streamWriter.WriteLine("1) Запас можности, %:");
                 streamWriter.WriteLine(reservPowerText);
             }
 
@@ -258,10 +258,10 @@ namespace CalculateTheHeat
                 streamWriter.WriteLine(DateTime.Now);
                 streamWriter.WriteLine("Расчёт котла по объёму помещения:");
                 streamWriter.WriteLine(result);
-                streamWriter.WriteLine("Параметры:");
-                streamWriter.WriteLine("Материл стен:");
+                streamWriter.WriteLine("----------Параметры:");
+                streamWriter.WriteLine("1) Материл стен:");
                 streamWriter.WriteLine(WallMaterial);
-                streamWriter.WriteLine("Высота потолков, м:");
+                streamWriter.WriteLine("2) Высота потолков, м:");
                 streamWriter.WriteLine(HeightWall);
             }
 
