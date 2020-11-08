@@ -33,7 +33,6 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label7 = new System.Windows.Forms.Label();
             this.labelCaclulateAreaResult = new System.Windows.Forms.Label();
-            this.buttonCalculateArea = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.comboBoxReservePower = new System.Windows.Forms.ComboBox();
@@ -45,7 +44,6 @@
             this.labelVolumeAttention = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.labelCalculateVolumeResult = new System.Windows.Forms.Label();
-            this.buttonCalculateVolume = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.comboBoxWallMaterial = new System.Windows.Forms.ComboBox();
@@ -62,7 +60,6 @@
             this.labelK10 = new System.Windows.Forms.Label();
             this.labelCalculateAllFeaturesResult = new System.Windows.Forms.Label();
             this.comboBoxK9 = new System.Windows.Forms.ComboBox();
-            this.buttonCalculateAllFeaturesReslt = new System.Windows.Forms.Button();
             this.labelK9 = new System.Windows.Forms.Label();
             this.labelK1 = new System.Windows.Forms.Label();
             this.comboBoxK1 = new System.Windows.Forms.ComboBox();
@@ -82,6 +79,7 @@
             this.Меню = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItemBack = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItemClose = new System.Windows.Forms.ToolStripMenuItem();
+            this.ButtonCalculateResult = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -96,18 +94,16 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tabControl1.Location = new System.Drawing.Point(0, 63);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(800, 426);
+            this.tabControl1.Size = new System.Drawing.Size(800, 383);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.label7);
             this.tabPage1.Controls.Add(this.labelCaclulateAreaResult);
-            this.tabPage1.Controls.Add(this.buttonCalculateArea);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.comboBoxReservePower);
@@ -116,7 +112,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(792, 400);
+            this.tabPage1.Size = new System.Drawing.Size(792, 357);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Расчёт по площади дома";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -135,21 +131,11 @@
             // labelCaclulateAreaResult
             // 
             this.labelCaclulateAreaResult.AutoSize = true;
-            this.labelCaclulateAreaResult.Location = new System.Drawing.Point(26, 370);
+            this.labelCaclulateAreaResult.Location = new System.Drawing.Point(40, 275);
             this.labelCaclulateAreaResult.Name = "labelCaclulateAreaResult";
             this.labelCaclulateAreaResult.Size = new System.Drawing.Size(37, 13);
             this.labelCaclulateAreaResult.TabIndex = 8;
             this.labelCaclulateAreaResult.Text = "Result";
-            // 
-            // buttonCalculateArea
-            // 
-            this.buttonCalculateArea.Location = new System.Drawing.Point(218, 267);
-            this.buttonCalculateArea.Name = "buttonCalculateArea";
-            this.buttonCalculateArea.Size = new System.Drawing.Size(122, 37);
-            this.buttonCalculateArea.TabIndex = 8;
-            this.buttonCalculateArea.Text = "Расчитать";
-            this.buttonCalculateArea.UseVisualStyleBackColor = true;
-            this.buttonCalculateArea.Click += new System.EventHandler(this.ButtonCalculateArea_Click);
             // 
             // label2
             // 
@@ -212,7 +198,6 @@
             this.tabPage2.Controls.Add(this.labelVolumeAttention);
             this.tabPage2.Controls.Add(this.label8);
             this.tabPage2.Controls.Add(this.labelCalculateVolumeResult);
-            this.tabPage2.Controls.Add(this.buttonCalculateVolume);
             this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Controls.Add(this.pictureBox2);
             this.tabPage2.Controls.Add(this.comboBoxWallMaterial);
@@ -221,7 +206,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(792, 400);
+            this.tabPage2.Size = new System.Drawing.Size(792, 357);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Расчёт по объёму помещений";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -254,7 +239,7 @@
             // 
             this.labelVolumeAttention.AutoSize = true;
             this.labelVolumeAttention.ForeColor = System.Drawing.Color.Red;
-            this.labelVolumeAttention.Location = new System.Drawing.Point(30, 341);
+            this.labelVolumeAttention.Location = new System.Drawing.Point(30, 293);
             this.labelVolumeAttention.Name = "labelVolumeAttention";
             this.labelVolumeAttention.Size = new System.Drawing.Size(49, 13);
             this.labelVolumeAttention.TabIndex = 17;
@@ -274,21 +259,11 @@
             // labelCalculateVolumeResult
             // 
             this.labelCalculateVolumeResult.AutoSize = true;
-            this.labelCalculateVolumeResult.Location = new System.Drawing.Point(30, 370);
+            this.labelCalculateVolumeResult.Location = new System.Drawing.Point(30, 316);
             this.labelCalculateVolumeResult.Name = "labelCalculateVolumeResult";
             this.labelCalculateVolumeResult.Size = new System.Drawing.Size(37, 13);
             this.labelCalculateVolumeResult.TabIndex = 14;
             this.labelCalculateVolumeResult.Text = "Result";
-            // 
-            // buttonCalculateVolume
-            // 
-            this.buttonCalculateVolume.Location = new System.Drawing.Point(200, 289);
-            this.buttonCalculateVolume.Name = "buttonCalculateVolume";
-            this.buttonCalculateVolume.Size = new System.Drawing.Size(122, 37);
-            this.buttonCalculateVolume.TabIndex = 15;
-            this.buttonCalculateVolume.Text = "Расчитать";
-            this.buttonCalculateVolume.UseVisualStyleBackColor = true;
-            this.buttonCalculateVolume.Click += new System.EventHandler(this.ButtonCalculateVolume_Click);
             // 
             // label4
             // 
@@ -344,7 +319,6 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.buttonSaveResultAllFeatures);
             this.tabPage3.Controls.Add(this.textBoxAreaWindows);
             this.tabPage3.Controls.Add(this.label9);
             this.tabPage3.Controls.Add(this.labelK5);
@@ -354,7 +328,6 @@
             this.tabPage3.Controls.Add(this.labelK10);
             this.tabPage3.Controls.Add(this.labelCalculateAllFeaturesResult);
             this.tabPage3.Controls.Add(this.comboBoxK9);
-            this.tabPage3.Controls.Add(this.buttonCalculateAllFeaturesReslt);
             this.tabPage3.Controls.Add(this.labelK9);
             this.tabPage3.Controls.Add(this.labelK1);
             this.tabPage3.Controls.Add(this.comboBoxK1);
@@ -371,14 +344,14 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(792, 400);
+            this.tabPage3.Size = new System.Drawing.Size(792, 357);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Расчёт с учётом всех особенностей";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // buttonSaveResultAllFeatures
             // 
-            this.buttonSaveResultAllFeatures.Location = new System.Drawing.Point(407, 297);
+            this.buttonSaveResultAllFeatures.Location = new System.Drawing.Point(666, 452);
             this.buttonSaveResultAllFeatures.Name = "buttonSaveResultAllFeatures";
             this.buttonSaveResultAllFeatures.Size = new System.Drawing.Size(122, 37);
             this.buttonSaveResultAllFeatures.TabIndex = 41;
@@ -464,7 +437,7 @@
             // labelCalculateAllFeaturesResult
             // 
             this.labelCalculateAllFeaturesResult.AutoSize = true;
-            this.labelCalculateAllFeaturesResult.Location = new System.Drawing.Point(26, 367);
+            this.labelCalculateAllFeaturesResult.Location = new System.Drawing.Point(26, 302);
             this.labelCalculateAllFeaturesResult.Name = "labelCalculateAllFeaturesResult";
             this.labelCalculateAllFeaturesResult.Size = new System.Drawing.Size(37, 13);
             this.labelCalculateAllFeaturesResult.TabIndex = 22;
@@ -483,16 +456,6 @@
             this.comboBoxK9.Name = "comboBoxK9";
             this.comboBoxK9.Size = new System.Drawing.Size(350, 21);
             this.comboBoxK9.TabIndex = 32;
-            // 
-            // buttonCalculateAllFeaturesReslt
-            // 
-            this.buttonCalculateAllFeaturesReslt.Location = new System.Drawing.Point(255, 297);
-            this.buttonCalculateAllFeaturesReslt.Name = "buttonCalculateAllFeaturesReslt";
-            this.buttonCalculateAllFeaturesReslt.Size = new System.Drawing.Size(122, 37);
-            this.buttonCalculateAllFeaturesReslt.TabIndex = 23;
-            this.buttonCalculateAllFeaturesReslt.Text = "Расчитать";
-            this.buttonCalculateAllFeaturesReslt.UseVisualStyleBackColor = true;
-            this.buttonCalculateAllFeaturesReslt.Click += new System.EventHandler(this.ButtonCalculateAllFeaturesReslt_Click);
             // 
             // labelK9
             // 
@@ -688,11 +651,23 @@
             this.ToolStripMenuItemClose.Text = "Выход";
             this.ToolStripMenuItemClose.Click += new System.EventHandler(this.ToolStripMenuItemClose_Click);
             // 
+            // ButtonCalculateResult
+            // 
+            this.ButtonCalculateResult.Location = new System.Drawing.Point(254, 452);
+            this.ButtonCalculateResult.Name = "ButtonCalculateResult";
+            this.ButtonCalculateResult.Size = new System.Drawing.Size(122, 37);
+            this.ButtonCalculateResult.TabIndex = 42;
+            this.ButtonCalculateResult.Text = "Расчитать";
+            this.ButtonCalculateResult.UseVisualStyleBackColor = true;
+            this.ButtonCalculateResult.Click += new System.EventHandler(this.ButtonCalculateResult_Click);
+            // 
             // BoilerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 489);
+            this.ClientSize = new System.Drawing.Size(800, 495);
+            this.Controls.Add(this.ButtonCalculateResult);
+            this.Controls.Add(this.buttonSaveResultAllFeatures);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.textBoxAreaHouse);
             this.Controls.Add(this.labelAreaHouse);
@@ -732,11 +707,9 @@
         private System.Windows.Forms.Label labelAreaHouse;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button buttonCalculateArea;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label labelCalculateVolumeResult;
-        private System.Windows.Forms.Button buttonCalculateVolume;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.ComboBox comboBoxWallMaterial;
@@ -761,7 +734,6 @@
         private System.Windows.Forms.Label labelK10;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label labelCalculateAllFeaturesResult;
-        private System.Windows.Forms.Button buttonCalculateAllFeaturesReslt;
         private System.Windows.Forms.ComboBox comboBoxHeightWall;
         private System.Windows.Forms.Label labelHeightWall;
         private System.Windows.Forms.Label labelK5;
@@ -773,5 +745,6 @@
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemClose;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemBack;
         private System.Windows.Forms.Button buttonSaveResultAllFeatures;
+        private System.Windows.Forms.Button ButtonCalculateResult;
     }
 }

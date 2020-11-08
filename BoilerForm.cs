@@ -100,61 +100,6 @@ namespace CalculateTheHeat
         односторонний нижний, где и подача, и обратка снизу – 1,28.
          */
         #endregion
-        #region Расчёт по площади дома
-        private void ButtonCalculateArea_Click(object sender, EventArgs e)
-        {
-            if (textBoxAreaHouse.Text != "")
-            {
-                labelCaclulateAreaResult.Text = "Для отопления дома площадью " + textBoxAreaHouse.Text + " кв.м., необходим котёл мощностью " +
-                    calculateBoilerArea.CalculateBoilerArea(textBoxAreaHouse.Text, comboBoxReservePower.SelectedIndex) + " кВт/ч";
-            }
-            else
-                MessageBox.Show("Введите полощадь отапливаемого помещения", "Внимание");
-        }
-        
-        #endregion
-        #region Расчёт по объёму помещений
-
-        private void ButtonCalculateVolume_Click(object sender, EventArgs e)
-        {
-            if (textBoxAreaHouse.Text != "")
-            {
-                labelCalculateVolumeResult.Text = "Для отопления квартиры площадью " + textBoxAreaHouse.Text + " кв.м., высотой потолков " +
-                    comboBoxK1.Text + " м, необходим котёл мощностью " +
-                    calculateBoilerVolume.CalculateBoilerHeightWall(textBoxAreaHouse.Text, Convert.ToDecimal(comboBoxHeightWall.Text), comboBoxWallMaterial.Text) + " кВт/ч";
-            }
-            else
-                MessageBox.Show("Введите полощадь отапливаемого помещения", "Внимание");
-
-            //Убрать управление элементом из кнопки
-            if (calculateBoilerVolume.HeightWall > 3)
-            {
-                labelVolumeAttention.Text = "Внимание! При высоте потолков свыше 3 м, значения сильно усредняются...";
-            }
-            else
-                labelVolumeAttention.Text = "";
-        }
-        #endregion
-        #region Расчёт с учётом всех особенностей
-
-        private void ButtonCalculateAllFeaturesReslt_Click(object sender, EventArgs e)
-        {
-            if (textBoxAreaHouse.Text != "")
-            {
-                labelCalculateAllFeaturesResult.Text = "Для отопления дома площадью " + textBoxAreaHouse.Text + " кв.м., необходим котёл мощностью " +
-                    calculateBoilerAllFeatures.CalculateBoilerAllFeatures(textBoxAreaHouse.Text,
-                    comboBoxK1.SelectedIndex, comboBoxK2.SelectedIndex, comboBoxK3.SelectedIndex,
-                    comboBoxK4.SelectedIndex, comboBoxK5.SelectedIndex, comboBoxK6.SelectedIndex,
-                    comboBoxK7.SelectedIndex, textBoxAreaWindows.Text, comboBoxK9.SelectedIndex,
-                    comboBoxK10.SelectedIndex) + " кВт/ч";
-
-                buttonSaveResultAllFeatures.Visible = true;
-            }
-            else
-                MessageBox.Show("Введите полощадь отапливаемого помещения", "Внимание");
-        }
-
-        #endregion
 
         private void TextBoxAreaHouse_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -212,6 +157,67 @@ namespace CalculateTheHeat
                 comboBoxK2.Text, comboBoxK3.Text, comboBoxK5.Text, comboBoxK10.Text,
                 comboBoxK7.Text, comboBoxK9.Text, comboBoxK6.Text, comboBoxK4.Text,
                 textBoxAreaWindows.Text);
+        }
+
+        private void ButtonCalculateResult_Click(object sender, EventArgs e)    //Общая кнопка Расчитать
+        {
+            if (tabControl1.SelectedTab == tabPage1)
+            {
+                if (textBoxAreaHouse.Text != "")
+                {
+                    labelCaclulateAreaResult.Text = "Для отопления дома площадью " + textBoxAreaHouse.Text + " кв.м., необходим котёл мощностью " +
+                        calculateBoilerArea.CalculateBoilerArea(textBoxAreaHouse.Text, comboBoxReservePower.SelectedIndex) + " кВт/ч";
+                }
+                else
+                    MessageBox.Show("Введите полощадь отапливаемого помещения", "Внимание");
+            }
+
+            if (tabControl1.SelectedTab == tabPage2)
+            {
+                if (textBoxAreaHouse.Text != "")
+                {
+                    labelCalculateVolumeResult.Text = "Для отопления квартиры площадью " + textBoxAreaHouse.Text + " кв.м., высотой потолков " +
+                        comboBoxK1.Text + " м, необходим котёл мощностью " +
+                        calculateBoilerVolume.CalculateBoilerHeightWall(textBoxAreaHouse.Text, Convert.ToDecimal(comboBoxHeightWall.Text), comboBoxWallMaterial.Text) + " кВт/ч";
+                }
+                else
+                    MessageBox.Show("Введите полощадь отапливаемого помещения", "Внимание");
+
+                //Убрать управление элементом из кнопки
+                if (calculateBoilerVolume.HeightWall > 3)
+                {
+                    labelVolumeAttention.Text = "Внимание! При высоте потолков свыше 3 м, значения сильно усредняются...";
+                }
+                else
+                    labelVolumeAttention.Text = "";
+            }
+            if (tabControl1.SelectedTab == tabPage3)
+            {
+                if (textBoxAreaHouse.Text != "")
+                {
+                    labelCalculateAllFeaturesResult.Text = "Для отопления дома площадью " + textBoxAreaHouse.Text + " кв.м., необходим котёл мощностью " +
+                        calculateBoilerAllFeatures.CalculateBoilerAllFeatures(textBoxAreaHouse.Text,
+                        comboBoxK1.SelectedIndex, comboBoxK2.SelectedIndex, comboBoxK3.SelectedIndex,
+                        comboBoxK4.SelectedIndex, comboBoxK5.SelectedIndex, comboBoxK6.SelectedIndex,
+                        comboBoxK7.SelectedIndex, textBoxAreaWindows.Text, comboBoxK9.SelectedIndex,
+                        comboBoxK10.SelectedIndex) + " кВт/ч";
+
+                    buttonSaveResultAllFeatures.Visible = true;
+                }
+                else
+                    MessageBox.Show("Введите полощадь отапливаемого помещения", "Внимание");
+
+/*                Решить вопрос реализации через Switch
+                switch (tabControl1.SelectedTab)
+                {
+                    case tabPage1:
+                        MessageBox.Show("");
+
+                    default:
+                        break;
+                }*/
+
+            }
         }
     }
 }
