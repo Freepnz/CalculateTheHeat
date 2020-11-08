@@ -202,7 +202,7 @@ namespace CalculateTheHeat
             {
                 streamWriter.WriteLine();
                 streamWriter.WriteLine(DateTime.Now);
-                streamWriter.WriteLine("Расчёт с учётом всех особенностей:");
+                streamWriter.WriteLine("Расчёт котла с учётом всех особенностей:");
                 streamWriter.WriteLine(result);
                 streamWriter.WriteLine("Параметры:");
                 streamWriter.WriteLine("Кол-во внешних стен в помещении:");
@@ -229,5 +229,44 @@ namespace CalculateTheHeat
 
             MessageBox.Show(@"Сохранённая информация расположена " + path);
         }   //Сохранение результатов
+
+        public void SaveResultInFile(string result, string reservPowerText)
+        {
+            string path = @"C:\\" + "Дом" + areaHouse + "кв" + ".txt";
+
+            using (StreamWriter streamWriter = new StreamWriter(path, true))
+            {
+                streamWriter.WriteLine();
+                streamWriter.WriteLine(DateTime.Now);
+                streamWriter.WriteLine("Расчёт котла по площади дома:");
+                streamWriter.WriteLine(result);
+                streamWriter.WriteLine("Параметры:");
+                streamWriter.WriteLine("Запас можности, %:");
+                streamWriter.WriteLine(reservPowerText);
+            }
+
+            MessageBox.Show(@"Сохранённая информация расположена " + path);
+        }
+
+        public void SaveResultInFile(string result, string WallMaterial, string HeightWall)
+        {
+            string path = @"C:\\" + "Дом" + areaHouse + "кв" + ".txt";
+
+            using (StreamWriter streamWriter = new StreamWriter(path, true))
+            {
+                streamWriter.WriteLine();
+                streamWriter.WriteLine(DateTime.Now);
+                streamWriter.WriteLine("Расчёт котла по объёму помещения:");
+                streamWriter.WriteLine(result);
+                streamWriter.WriteLine("Параметры:");
+                streamWriter.WriteLine("Материл стен:");
+                streamWriter.WriteLine(WallMaterial);
+                streamWriter.WriteLine("Высота потолков, м:");
+                streamWriter.WriteLine(HeightWall);
+            }
+
+            MessageBox.Show(@"Сохранённая информация расположена " + path);
+        }
+
     }
 }

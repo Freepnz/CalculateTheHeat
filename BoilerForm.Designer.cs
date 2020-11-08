@@ -50,7 +50,6 @@
             this.labelWallMaterial = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.buttonSaveResultAllFeatures = new System.Windows.Forms.Button();
             this.textBoxAreaWindows = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.labelK5 = new System.Windows.Forms.Label();
@@ -73,6 +72,7 @@
             this.comboBoxK3 = new System.Windows.Forms.ComboBox();
             this.labelK4 = new System.Windows.Forms.Label();
             this.comboBoxK4 = new System.Windows.Forms.ComboBox();
+            this.ButtonSaveResult = new System.Windows.Forms.Button();
             this.textBoxAreaHouse = new System.Windows.Forms.TextBox();
             this.labelAreaHouse = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -99,6 +99,7 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(800, 383);
             this.tabControl1.TabIndex = 0;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPage1
             // 
@@ -291,8 +292,8 @@
             this.comboBoxWallMaterial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxWallMaterial.FormattingEnabled = true;
             this.comboBoxWallMaterial.Items.AddRange(new object[] {
-            "Кирпичный дом",
-            "Панельный дом"});
+            "Кирпич",
+            "Бетонные панели"});
             this.comboBoxWallMaterial.Location = new System.Drawing.Point(271, 230);
             this.comboBoxWallMaterial.Name = "comboBoxWallMaterial";
             this.comboBoxWallMaterial.Size = new System.Drawing.Size(153, 21);
@@ -348,16 +349,6 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Расчёт с учётом всех особенностей";
             this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // buttonSaveResultAllFeatures
-            // 
-            this.buttonSaveResultAllFeatures.Location = new System.Drawing.Point(666, 452);
-            this.buttonSaveResultAllFeatures.Name = "buttonSaveResultAllFeatures";
-            this.buttonSaveResultAllFeatures.Size = new System.Drawing.Size(122, 37);
-            this.buttonSaveResultAllFeatures.TabIndex = 41;
-            this.buttonSaveResultAllFeatures.Text = "Сохранить результат";
-            this.buttonSaveResultAllFeatures.UseVisualStyleBackColor = true;
-            this.buttonSaveResultAllFeatures.Click += new System.EventHandler(this.ButtonSaveResultAllFeatures_Click);
             // 
             // textBoxAreaWindows
             // 
@@ -601,6 +592,16 @@
             this.comboBoxK4.Size = new System.Drawing.Size(350, 21);
             this.comboBoxK4.TabIndex = 20;
             // 
+            // ButtonSaveResult
+            // 
+            this.ButtonSaveResult.Location = new System.Drawing.Point(666, 452);
+            this.ButtonSaveResult.Name = "ButtonSaveResult";
+            this.ButtonSaveResult.Size = new System.Drawing.Size(122, 37);
+            this.ButtonSaveResult.TabIndex = 41;
+            this.ButtonSaveResult.Text = "Сохранить результат";
+            this.ButtonSaveResult.UseVisualStyleBackColor = true;
+            this.ButtonSaveResult.Click += new System.EventHandler(this.ButtonSaveResult_Click);
+            // 
             // textBoxAreaHouse
             // 
             this.textBoxAreaHouse.Location = new System.Drawing.Point(189, 37);
@@ -667,7 +668,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 495);
             this.Controls.Add(this.ButtonCalculateResult);
-            this.Controls.Add(this.buttonSaveResultAllFeatures);
+            this.Controls.Add(this.ButtonSaveResult);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.textBoxAreaHouse);
             this.Controls.Add(this.labelAreaHouse);
@@ -744,7 +745,7 @@
         private System.Windows.Forms.ToolStripMenuItem Меню;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemClose;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemBack;
-        private System.Windows.Forms.Button buttonSaveResultAllFeatures;
+        private System.Windows.Forms.Button ButtonSaveResult;
         private System.Windows.Forms.Button ButtonCalculateResult;
     }
 }

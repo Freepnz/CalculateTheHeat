@@ -36,7 +36,7 @@ namespace CalculateTheHeat
             comboBoxK7.SelectedIndex = 0;
             comboBoxK9.SelectedIndex = 0;
             comboBoxK10.SelectedIndex = 0;
-            buttonSaveResultAllFeatures.Visible = false;
+            ButtonSaveResult.Visible = false;
 
         }
         #region Пояснения коэфициентов
@@ -150,15 +150,6 @@ namespace CalculateTheHeat
             Application.Exit();
         }
 
-        private void ButtonSaveResultAllFeatures_Click(object sender, EventArgs e)
-        {
-            //SaveResult
-            calculateBoiler.SaveResultInFile(labelCalculateAllFeaturesResult.Text, comboBoxK1.Text,
-                comboBoxK2.Text, comboBoxK3.Text, comboBoxK5.Text, comboBoxK10.Text,
-                comboBoxK7.Text, comboBoxK9.Text, comboBoxK6.Text, comboBoxK4.Text,
-                textBoxAreaWindows.Text);
-        }
-
         public void ButtonCalculateResult_Click(object sender, EventArgs e)    //Общая кнопка Расчитать
         {
             if (tabControl1.SelectedTab == tabPage1)
@@ -202,23 +193,46 @@ namespace CalculateTheHeat
                         comboBoxK4.SelectedIndex, comboBoxK5.SelectedIndex, comboBoxK6.SelectedIndex,
                         comboBoxK7.SelectedIndex, textBoxAreaWindows.Text, comboBoxK9.SelectedIndex,
                         comboBoxK10.SelectedIndex) + " кВт/ч";
-
-                    buttonSaveResultAllFeatures.Visible = true;
                 }
                 else
                     MessageBox.Show("Введите полощадь отапливаемого помещения", "Внимание");
+                /*                Решить вопрос реализации через Switch
+                                switch (tabControl1.SelectedTab)
+                                {
+                                    case tabPage1:
+                                        MessageBox.Show("");
 
-/*                Решить вопрос реализации через Switch
-                switch (tabControl1.SelectedTab)
-                {
-                    case tabPage1:
-                        MessageBox.Show("");
-
-                    default:
-                        break;
-                }*/
+                                    default:
+                                        break;
+                                }*/
 
             }
+            ButtonSaveResult.Visible = true;
+        }
+
+        private void ButtonSaveResult_Click(object sender, EventArgs e)
+        {
+            //SaveResult
+            if (tabControl1.SelectedTab == tabPage1)
+            {
+                calculateBoiler.SaveResultInFile(labelCaclulateAreaResult.Text, comboBoxReservePower.Text);
+            }
+            if (tabControl1.SelectedTab == tabPage2)
+            {
+                calculateBoiler.SaveResultInFile(labelCalculateVolumeResult.Text, comboBoxWallMaterial.Text, comboBoxHeightWall.Text);
+            }
+            if (tabControl1.SelectedTab == tabPage3)
+            {
+                calculateBoiler.SaveResultInFile(labelCalculateAllFeaturesResult.Text, comboBoxK1.Text,
+                    comboBoxK2.Text, comboBoxK3.Text, comboBoxK5.Text, comboBoxK10.Text,
+                    comboBoxK7.Text, comboBoxK9.Text, comboBoxK6.Text, comboBoxK4.Text,
+                    textBoxAreaWindows.Text);
+            }
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ButtonSaveResult.Visible = false;
         }
     }
 }
