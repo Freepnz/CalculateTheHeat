@@ -38,6 +38,8 @@
             this.ButtonAddPipe = new System.Windows.Forms.Button();
             this.RadioButtonPlastik = new System.Windows.Forms.RadioButton();
             this.RadioButtonMetall = new System.Windows.Forms.RadioButton();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -113,6 +115,7 @@
             this.ButtonAddPipe.TabIndex = 16;
             this.ButtonAddPipe.Text = "Добавить трубу";
             this.ButtonAddPipe.UseVisualStyleBackColor = true;
+            this.ButtonAddPipe.Click += new System.EventHandler(this.ButtonAddPipe_Click);
             // 
             // RadioButtonPlastik
             // 
@@ -136,11 +139,35 @@
             this.RadioButtonMetall.Text = "Сталь";
             this.RadioButtonMetall.UseVisualStyleBackColor = true;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "15",
+            "20",
+            "25",
+            "32",
+            "40",
+            "50"});
+            this.comboBox1.Location = new System.Drawing.Point(78, 182);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 19;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(246, 437);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 20;
+            // 
             // VolumePipeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(375, 537);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.RadioButtonMetall);
             this.Controls.Add(this.RadioButtonPlastik);
             this.Controls.Add(this.ButtonAddPipe);
@@ -169,5 +196,7 @@
         private System.Windows.Forms.Button ButtonAddPipe;
         private System.Windows.Forms.RadioButton RadioButtonPlastik;
         private System.Windows.Forms.RadioButton RadioButtonMetall;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

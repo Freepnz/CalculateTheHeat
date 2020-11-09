@@ -26,5 +26,17 @@ namespace CalculateTheHeat
         {
             this.Hide();
         }
+
+        private void ButtonAddPipe_Click(object sender, EventArgs e)
+        {
+            TextBox start = (TextBox)textBox1;
+
+            TextBox newTextBox = new TextBox();
+            newTextBox.Text = "";
+            newTextBox.Width = start.Width;
+            newTextBox.Location = new Point(start.Location.Y, start.Location.X + 10);
+
+            this.Controls.Add(newTextBox);
+        }
     }
 }
