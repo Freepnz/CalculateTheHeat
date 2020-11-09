@@ -352,7 +352,7 @@
             // 
             // textBoxAreaWindows
             // 
-            this.textBoxAreaWindows.Location = new System.Drawing.Point(609, 249);
+            this.textBoxAreaWindows.Location = new System.Drawing.Point(582, 249);
             this.textBoxAreaWindows.Name = "textBoxAreaWindows";
             this.textBoxAreaWindows.Size = new System.Drawing.Size(100, 20);
             this.textBoxAreaWindows.TabIndex = 38;
@@ -361,7 +361,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(404, 252);
+            this.label9.Location = new System.Drawing.Point(404, 250);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(172, 13);
             this.label9.TabIndex = 37;
@@ -370,7 +370,7 @@
             // labelK5
             // 
             this.labelK5.AutoSize = true;
-            this.labelK5.Location = new System.Drawing.Point(26, 186);
+            this.labelK5.Location = new System.Drawing.Point(26, 183);
             this.labelK5.Name = "labelK5";
             this.labelK5.Size = new System.Drawing.Size(193, 13);
             this.labelK5.TabIndex = 35;
@@ -401,7 +401,7 @@
             "Диагональный, где подача снизу, обратка сверху",
             "Односторонний, где подача снизу, обратка сверху",
             "Односторонний нижний, где и подача, и обратка снизу"});
-            this.comboBoxK10.Location = new System.Drawing.Point(29, 249);
+            this.comboBoxK10.Location = new System.Drawing.Point(29, 248);
             this.comboBoxK10.Name = "comboBoxK10";
             this.comboBoxK10.Size = new System.Drawing.Size(348, 21);
             this.comboBoxK10.TabIndex = 34;
@@ -419,7 +419,7 @@
             // labelK10
             // 
             this.labelK10.AutoSize = true;
-            this.labelK10.Location = new System.Drawing.Point(26, 233);
+            this.labelK10.Location = new System.Drawing.Point(26, 229);
             this.labelK10.Name = "labelK10";
             this.labelK10.Size = new System.Drawing.Size(176, 13);
             this.labelK10.TabIndex = 33;
@@ -443,7 +443,7 @@
             "Прикрыт подоконником или выступом стены",
             "Прикрыт декоративным кожухом только снаружи",
             "Полностью закрыт экраном"});
-            this.comboBoxK9.Location = new System.Drawing.Point(407, 107);
+            this.comboBoxK9.Location = new System.Drawing.Point(407, 104);
             this.comboBoxK9.Name = "comboBoxK9";
             this.comboBoxK9.Size = new System.Drawing.Size(350, 21);
             this.comboBoxK9.TabIndex = 32;
@@ -451,7 +451,7 @@
             // labelK9
             // 
             this.labelK9.AutoSize = true;
-            this.labelK9.Location = new System.Drawing.Point(404, 91);
+            this.labelK9.Location = new System.Drawing.Point(404, 87);
             this.labelK9.Name = "labelK9";
             this.labelK9.Size = new System.Drawing.Size(244, 13);
             this.labelK9.TabIndex = 31;
@@ -474,7 +474,7 @@
             "Одна",
             "Две",
             "Три"});
-            this.comboBoxK1.Location = new System.Drawing.Point(29, 61);
+            this.comboBoxK1.Location = new System.Drawing.Point(29, 64);
             this.comboBoxK1.Name = "comboBoxK1";
             this.comboBoxK1.Size = new System.Drawing.Size(350, 21);
             this.comboBoxK1.TabIndex = 14;
@@ -487,7 +487,7 @@
             "Стеклопакеты обычные (деревянные) двойные окна",
             "Окна с двойным стеклопакетом (2 воздушные камеры)",
             "Стеклопакет с аргоновым заполнением, тройной стеклопакет "});
-            this.comboBoxK7.Location = new System.Drawing.Point(407, 61);
+            this.comboBoxK7.Location = new System.Drawing.Point(407, 62);
             this.comboBoxK7.Name = "comboBoxK7";
             this.comboBoxK7.Size = new System.Drawing.Size(348, 21);
             this.comboBoxK7.TabIndex = 28;
@@ -517,7 +517,7 @@
             this.comboBoxK2.Items.AddRange(new object[] {
             "Север, северо-восток или восток",
             "Юг, юго-запад или запад"});
-            this.comboBoxK2.Location = new System.Drawing.Point(29, 107);
+            this.comboBoxK2.Location = new System.Drawing.Point(29, 110);
             this.comboBoxK2.Name = "comboBoxK2";
             this.comboBoxK2.Size = new System.Drawing.Size(348, 21);
             this.comboBoxK2.TabIndex = 16;
@@ -530,7 +530,7 @@
             "Холодное, неотапливаемое помещение/чердак",
             "Утепленный чердак/мансарда",
             "Отапливаемое жилое помещение"});
-            this.comboBoxK6.Location = new System.Drawing.Point(407, 154);
+            this.comboBoxK6.Location = new System.Drawing.Point(407, 146);
             this.comboBoxK6.Name = "comboBoxK6";
             this.comboBoxK6.Size = new System.Drawing.Size(350, 21);
             this.comboBoxK6.TabIndex = 26;
@@ -538,7 +538,7 @@
             // labelK3
             // 
             this.labelK3.AutoSize = true;
-            this.labelK3.Location = new System.Drawing.Point(26, 138);
+            this.labelK3.Location = new System.Drawing.Point(26, 137);
             this.labelK3.Name = "labelK3";
             this.labelK3.Size = new System.Drawing.Size(143, 13);
             this.labelK3.TabIndex = 17;
@@ -547,7 +547,7 @@
             // labelK6
             // 
             this.labelK6.AutoSize = true;
-            this.labelK6.Location = new System.Drawing.Point(404, 138);
+            this.labelK6.Location = new System.Drawing.Point(404, 129);
             this.labelK6.Name = "labelK6";
             this.labelK6.Size = new System.Drawing.Size(221, 13);
             this.labelK6.TabIndex = 25;
@@ -561,7 +561,7 @@
             "Простые, не утепленные стены",
             "Кладка в 2 кирпича или легкое утепление",
             "Высококачественная расчетная теплоизоляция"});
-            this.comboBoxK3.Location = new System.Drawing.Point(29, 154);
+            this.comboBoxK3.Location = new System.Drawing.Point(29, 156);
             this.comboBoxK3.Name = "comboBoxK3";
             this.comboBoxK3.Size = new System.Drawing.Size(348, 21);
             this.comboBoxK3.TabIndex = 18;
@@ -569,7 +569,7 @@
             // labelK4
             // 
             this.labelK4.AutoSize = true;
-            this.labelK4.Location = new System.Drawing.Point(404, 186);
+            this.labelK4.Location = new System.Drawing.Point(404, 171);
             this.labelK4.Name = "labelK4";
             this.labelK4.Size = new System.Drawing.Size(332, 26);
             this.labelK4.TabIndex = 19;
@@ -587,7 +587,7 @@
             "от -15°С до -19°С",
             "от -10°С до -14°С",
             "не холоднее, чем -10°С"});
-            this.comboBoxK4.Location = new System.Drawing.Point(407, 215);
+            this.comboBoxK4.Location = new System.Drawing.Point(407, 201);
             this.comboBoxK4.Name = "comboBoxK4";
             this.comboBoxK4.Size = new System.Drawing.Size(350, 21);
             this.comboBoxK4.TabIndex = 20;
@@ -641,14 +641,14 @@
             // ToolStripMenuItemBack
             // 
             this.ToolStripMenuItemBack.Name = "ToolStripMenuItemBack";
-            this.ToolStripMenuItemBack.Size = new System.Drawing.Size(108, 22);
+            this.ToolStripMenuItemBack.Size = new System.Drawing.Size(180, 22);
             this.ToolStripMenuItemBack.Text = "Назад";
             this.ToolStripMenuItemBack.Click += new System.EventHandler(this.ToolStripMenuItemBack_Click);
             // 
             // ToolStripMenuItemClose
             // 
             this.ToolStripMenuItemClose.Name = "ToolStripMenuItemClose";
-            this.ToolStripMenuItemClose.Size = new System.Drawing.Size(108, 22);
+            this.ToolStripMenuItemClose.Size = new System.Drawing.Size(180, 22);
             this.ToolStripMenuItemClose.Text = "Выход";
             this.ToolStripMenuItemClose.Click += new System.EventHandler(this.ToolStripMenuItemClose_Click);
             // 

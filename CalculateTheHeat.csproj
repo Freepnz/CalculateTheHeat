@@ -56,6 +56,12 @@
       <DependentUpon>BoilerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="CalculateBoiler.cs" />
+    <Compile Include="FluidForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FluidForm.Designer.cs">
+      <DependentUpon>FluidForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="BoilerForm.resx">
       <DependentUpon>BoilerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FluidForm.resx">
+      <DependentUpon>FluidForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

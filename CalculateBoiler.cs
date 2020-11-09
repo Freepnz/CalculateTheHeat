@@ -228,7 +228,7 @@ namespace CalculateTheHeat
             }
 
             MessageBox.Show(@"Сохранённая информация расположена " + path);
-        }   //Сохранение результатов
+        }  
 
         public void SaveResultInFile(string result, string reservPowerText)
         {
@@ -267,6 +267,5 @@ namespace CalculateTheHeat
 
             MessageBox.Show(@"Сохранённая информация расположена " + path);
         }
-        //Тест после слияния веток
     }
 }

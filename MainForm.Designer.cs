@@ -28,19 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SelectionBoiler = new System.Windows.Forms.Button();
+            this.ButtonSelectionBoiler = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.buttonSelectionFluid = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // SelectionBoiler
+            // ButtonSelectionBoiler
             // 
-            this.SelectionBoiler.Location = new System.Drawing.Point(11, 104);
-            this.SelectionBoiler.Name = "SelectionBoiler";
-            this.SelectionBoiler.Size = new System.Drawing.Size(314, 34);
-            this.SelectionBoiler.TabIndex = 0;
-            this.SelectionBoiler.Text = "Выбор отопительного котла ";
-            this.SelectionBoiler.UseVisualStyleBackColor = true;
-            this.SelectionBoiler.Click += new System.EventHandler(this.SelectionBoiler_Click);
+            this.ButtonSelectionBoiler.Location = new System.Drawing.Point(11, 104);
+            this.ButtonSelectionBoiler.Name = "ButtonSelectionBoiler";
+            this.ButtonSelectionBoiler.Size = new System.Drawing.Size(314, 34);
+            this.ButtonSelectionBoiler.TabIndex = 0;
+            this.ButtonSelectionBoiler.Text = "Выбор отопительного котла ";
+            this.ButtonSelectionBoiler.UseVisualStyleBackColor = true;
+            this.ButtonSelectionBoiler.Click += new System.EventHandler(this.ButtonSelectionBoiler_Click);
             // 
             // label1
             // 
@@ -52,13 +53,24 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Подбор и расчёт оборудования\r\nдля мотажа системы отопления";
             // 
+            // buttonSelectionFluid
+            // 
+            this.buttonSelectionFluid.Location = new System.Drawing.Point(12, 144);
+            this.buttonSelectionFluid.Name = "buttonSelectionFluid";
+            this.buttonSelectionFluid.Size = new System.Drawing.Size(313, 34);
+            this.buttonSelectionFluid.TabIndex = 2;
+            this.buttonSelectionFluid.Text = "Расчёт объёма теплоносителя в системе отопления";
+            this.buttonSelectionFluid.UseVisualStyleBackColor = true;
+            this.buttonSelectionFluid.Click += new System.EventHandler(this.button1_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(338, 450);
+            this.Controls.Add(this.buttonSelectionFluid);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.SelectionBoiler);
+            this.Controls.Add(this.ButtonSelectionBoiler);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -70,8 +82,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button SelectionBoiler;
+        private System.Windows.Forms.Button ButtonSelectionBoiler;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonSelectionFluid;
     }
 }
 

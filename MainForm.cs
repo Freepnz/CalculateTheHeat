@@ -17,12 +17,19 @@ namespace CalculateTheHeat
             InitializeComponent();
         }
 
-        readonly BoilerForm calculateBoiler = new BoilerForm();
+        //readonly BoilerForm calculateBoiler = new BoilerForm();
 
-        private void SelectionBoiler_Click(object sender, EventArgs e)
+        private void ButtonSelectionBoiler_Click(object sender, EventArgs e)
         {
-            //BoilerForm calculateBoiler = new BoilerForm();
+            BoilerForm calculateBoiler = new BoilerForm();
             calculateBoiler.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FluidForm fluidForm = new FluidForm();
+            fluidForm.Show();
             this.Hide();
         }
     }
