@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace CalculateTheHeat
 {
-    class CalculateBoiler
+    public class CalculateBoiler
     {
         private decimal areaHouse = 0;
         private decimal reservPower = 0;

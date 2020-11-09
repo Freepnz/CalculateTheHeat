@@ -26,7 +26,7 @@ namespace CalculateTheHeat
             this.Hide();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             FluidForm fluidForm = new FluidForm();
             fluidForm.Show();

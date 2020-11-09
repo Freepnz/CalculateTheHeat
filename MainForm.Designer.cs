@@ -56,12 +56,12 @@
             // buttonSelectionFluid
             // 
             this.buttonSelectionFluid.Location = new System.Drawing.Point(12, 144);
-            this.buttonSelectionFluid.Name = "buttonSelectionFluid";
+            this.buttonSelectionFluid.Name = "ButtonSelectionFluid";
             this.buttonSelectionFluid.Size = new System.Drawing.Size(313, 34);
             this.buttonSelectionFluid.TabIndex = 2;
             this.buttonSelectionFluid.Text = "Расчёт объёма теплоносителя в системе отопления";
             this.buttonSelectionFluid.UseVisualStyleBackColor = true;
-            this.buttonSelectionFluid.Click += new System.EventHandler(this.button1_Click);
+            this.buttonSelectionFluid.Click += new System.EventHandler(this.Button1_Click);
             // 
             // MainForm
             // 
