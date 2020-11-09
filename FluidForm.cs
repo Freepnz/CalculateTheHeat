@@ -34,5 +34,31 @@ namespace CalculateTheHeat
         {
             labelResult.Text = "Объём теплоносителя в системе отопления равен " + calculateFluid.CalculateVolumeFluid() + " л.";
         }
+
+        private void ButtonInfo1_Click(object sender, EventArgs e)
+        {
+            ShowInfo();
+        }
+
+        private void ShowInfo()
+        {
+            MessageBox.Show("Объем теплоносителя в оборудовании каждый производитель указывает в паспортных данных на оборудование", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void ButtonInfo2_Click(object sender, EventArgs e)
+        {
+            ShowInfo();
+        }
+
+        private void ButtonInfo3_Click(object sender, EventArgs e)
+        {
+            ShowInfo();
+        }
+
+        private void ButtonEnterDataVolumePipe_Click(object sender, EventArgs e)
+        {
+            VolumePipeForm volumePipeForm = new VolumePipeForm();
+            volumePipeForm.Show();
+        }
     }
 }
