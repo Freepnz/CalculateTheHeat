@@ -44,8 +44,9 @@
             this.pictureBoxInfo = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.buttonCalculatePipe = new System.Windows.Forms.Button();
+            this.buttonEnterData = new System.Windows.Forms.Button();
             this.labelResult = new System.Windows.Forms.Label();
+            this.buttonCalculateVolumeFluid = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -128,14 +129,16 @@
             // ToolStripMenuItemBack
             // 
             this.ToolStripMenuItemBack.Name = "ToolStripMenuItemBack";
-            this.ToolStripMenuItemBack.Size = new System.Drawing.Size(108, 22);
+            this.ToolStripMenuItemBack.Size = new System.Drawing.Size(180, 22);
             this.ToolStripMenuItemBack.Text = "Назад";
+            this.ToolStripMenuItemBack.Click += new System.EventHandler(this.ToolStripMenuItemBack_Click);
             // 
             // ToolStripMenuItemClose
             // 
             this.ToolStripMenuItemClose.Name = "ToolStripMenuItemClose";
-            this.ToolStripMenuItemClose.Size = new System.Drawing.Size(108, 22);
+            this.ToolStripMenuItemClose.Size = new System.Drawing.Size(180, 22);
             this.ToolStripMenuItemClose.Text = "Выход";
+            this.ToolStripMenuItemClose.Click += new System.EventHandler(this.ToolStripMenuItemClose_Click);
             // 
             // textBox2
             // 
@@ -181,14 +184,14 @@
             this.pictureBox2.TabIndex = 17;
             this.pictureBox2.TabStop = false;
             // 
-            // buttonCalculatePipe
+            // buttonEnterData
             // 
-            this.buttonCalculatePipe.Location = new System.Drawing.Point(320, 243);
-            this.buttonCalculatePipe.Name = "buttonCalculatePipe";
-            this.buttonCalculatePipe.Size = new System.Drawing.Size(145, 23);
-            this.buttonCalculatePipe.TabIndex = 18;
-            this.buttonCalculatePipe.Text = "Расчитать";
-            this.buttonCalculatePipe.UseVisualStyleBackColor = true;
+            this.buttonEnterData.Location = new System.Drawing.Point(320, 238);
+            this.buttonEnterData.Name = "buttonEnterData";
+            this.buttonEnterData.Size = new System.Drawing.Size(145, 23);
+            this.buttonEnterData.TabIndex = 18;
+            this.buttonEnterData.Text = "Ввести данные";
+            this.buttonEnterData.UseVisualStyleBackColor = true;
             // 
             // labelResult
             // 
@@ -199,13 +202,24 @@
             this.labelResult.TabIndex = 19;
             this.labelResult.Text = "Result";
             // 
+            // buttonCalculateVolumeFluid
+            // 
+            this.buttonCalculateVolumeFluid.Location = new System.Drawing.Point(164, 304);
+            this.buttonCalculateVolumeFluid.Name = "ButtonCalculateVolumeFluid";
+            this.buttonCalculateVolumeFluid.Size = new System.Drawing.Size(145, 23);
+            this.buttonCalculateVolumeFluid.TabIndex = 20;
+            this.buttonCalculateVolumeFluid.Text = "Расчитать";
+            this.buttonCalculateVolumeFluid.UseVisualStyleBackColor = true;
+            this.buttonCalculateVolumeFluid.Click += new System.EventHandler(this.ButtonCalculateVolumeFluid_Click);
+            // 
             // FluidForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonCalculateVolumeFluid);
             this.Controls.Add(this.labelResult);
-            this.Controls.Add(this.buttonCalculatePipe);
+            this.Controls.Add(this.buttonEnterData);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBoxInfo);
@@ -247,7 +261,8 @@
         private System.Windows.Forms.PictureBox pictureBoxInfo;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button buttonCalculatePipe;
+        private System.Windows.Forms.Button buttonEnterData;
         private System.Windows.Forms.Label labelResult;
+        private System.Windows.Forms.Button buttonCalculateVolumeFluid;
     }
 }

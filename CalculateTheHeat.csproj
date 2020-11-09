@@ -56,6 +56,7 @@
       <DependentUpon>BoilerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="CalculateBoiler.cs" />
+    <Compile Include="CalculateFluid.cs" />
     <Compile Include="FluidForm.cs">
       <SubType>Form</SubType>
     </Compile>

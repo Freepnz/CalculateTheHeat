@@ -16,5 +16,23 @@ namespace CalculateTheHeat
         {
             InitializeComponent();
         }
+        readonly CalculateFluid calculateFluid = new CalculateFluid();
+
+        private void ToolStripMenuItemBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            MainForm mainForm = new MainForm();
+            mainForm.Show();
+        }
+
+        private void ToolStripMenuItemClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void ButtonCalculateVolumeFluid_Click(object sender, EventArgs e)
+        {
+            labelResult.Text = "Объём теплоносителя в системе отопления равен " + calculateFluid.CalculateVolumeFluid() + " л.";
+        }
     }
 }
