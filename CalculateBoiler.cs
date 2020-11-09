@@ -149,7 +149,7 @@ namespace CalculateTheHeat
             return Convert.ToInt32(100 * areaHouse * k1 * k2 * k3 * k4 * k5 * k6 * k7 * k8 * k9 * k10 / 1000);
         }//Расчёт мощности котла с учётом всех параметров
 
-        private decimal SearchAreaWindows(decimal areaHouse, string k8val)
+        public decimal SearchAreaWindows(decimal areaHouse, string k8val)
         {
             if (k8val == "")
             {
